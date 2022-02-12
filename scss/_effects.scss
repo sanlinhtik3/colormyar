@@ -1,0 +1,264 @@
+$sm: 0 1px 2px 0 rgb(0 0 0 / 0.05) !default;
+$one: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !default;
+$md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !default;
+$lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !default;
+$xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !default;
+$twoxl: 0 25px 50px -12px rgb(0 0 0 / 0.25) !default;
+$inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05) !default;
+$none: 0 0 #0000 !default;
+
+$shadows: (
+  "sm": $sm,
+  "": $one,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl,
+  "2xl": $twoxl,
+  "inner": $inner,
+  "none": $none,
+)!default;
+
+//Box Shadow Color
+
+
+//---------------------------------------
+//
+// Effects
+//
+//---------------------------------------
+
+// Box Shadow
+@each $property, $value in $shadows {
+
+  @if #{$property} == "" {
+    .shadow {
+      box-shadow: var(--#{$variable-prefix}-shadow) !important;
+    }
+    .shadow {
+      --#{$variable-prefix}-shadow: #{$value} !important;
+      --#{$variable-prefix}-shadow-colored: 0 1px 3px 0 var(--#{$variable-prefix}-shadow-color), 0 1px 2px -1px var(--#{$variable-prefix}-shadow-color) !important;
+    }
+  } @else if #{$property} == "sm" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow) !important;
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value} !important;
+      --#{$variable-prefix}-shadow-colored:  0 1px 2px var(--#{$variable-prefix}-shadow-color) !important;
+    }
+  } @else if #{$property} == "md" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow) !important;
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value} !important;
+      --#{$variable-prefix}-shadow-colored: 0 4px 6px -1px var(--#{$variable-prefix}-shadow-color), 0 2px 4px -2px var(--#{$variable-prefix}-shadow-color) !important;
+    }
+  } @else if #{$property} == "lg" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow) !important;
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value} !important;
+      --#{$variable-prefix}-shadow-colored: 0 10px 15px -3px var(--#{$variable-prefix}-shadow-color), 0 4px 6px -4px var(--#{$variable-prefix}-shadow-color) !important;
+    }
+  } @else if #{$property} == "xl" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow);
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value};
+      --#{$variable-prefix}-shadow-colored: 0 20px 25px -5px var(--#{$variable-prefix}-shadow-color), 0 8px 10px -6px var(--#{$variable-prefix}-shadow-color);
+    }
+  } @else if #{$property} == "2xl" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow);
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value};
+      --#{$variable-prefix}-shadow-colored: 0 25px 50px -12px var(--#{$variable-prefix}-shadow-color);
+    }
+  } @else if #{$property} == "inner" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow);
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value};
+      --#{$variable-prefix}-shadow-colored: inset 0 2px 4px 0 var(--#{$variable-prefix}-shadow-color);
+    }
+  } @else if #{$property} == "none" {
+    .shadow-#{$property} {
+      box-shadow: var(--#{$variable-prefix}-shadow);
+    }
+    .shadow-#{$property} {
+      --#{$variable-prefix}-shadow: #{$value};
+      --#{$variable-prefix}-shadow-colored: 0 0 #0000;
+    }
+  }
+
+}
+
+// Box Shadow Color
+// Utilities for controlling the color of a box shadow.
+@each $property, $value in $col-vals {
+  .shadow-#{$property} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored);
+    --#{$variable-prefix}-shadow-color: #{$value}!important;
+  }
+}
+
+$per: 80 !default; // 0.5
+
+@each $num, $color in $slates {
+  .shadow-slate-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $grays {
+  .shadow-gray-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $zincs {
+  .shadow-zinc-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $neutrals {
+  .shadow-neutral-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $stones {
+  .shadow-stone-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $reds {
+  .shadow-red-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $oranges {
+  .shadow-orange-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $ambers {
+  .shadow-amber-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $yellows {
+  .shadow-yellow-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $limes {
+  .shadow-lime-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $greens {
+  .shadow-green-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $emeralds {
+  .shadow-emerald-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $teals {
+  .shadow-teal-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $cyans {
+  .shadow-cyan-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $skys {
+  .shadow-sky-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $blues {
+  .shadow-blue-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $indigos {
+  .shadow-indigo-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $violets {
+  .shadow-violet-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $purples {
+  .shadow-purple-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $fuchsias {
+  .shadow-fuchsia-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $pinks {
+  .shadow-pink-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}
+
+@each $num, $color in $roses {
+  .shadow-rose-#{$num} {
+    --#{$variable-prefix}-shadow: var(--#{$variable-prefix}-shadow-colored) !important;
+    --#{$variable-prefix}-shadow-color: #{$color}#{$per} !important;
+  }
+}

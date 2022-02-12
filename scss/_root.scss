@@ -1,0 +1,72 @@
+:root {
+  // Note: Custom variable values only support SassScript inside `#{}`.
+
+  // Colors
+
+  @each $num, $color in $slates {
+    --#{$variable-prefix}-slate-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $grays {
+    --#{$variable-prefix}-gray-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $zincs {
+    --#{$variable-prefix}-zinc-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $neutrals {
+    --#{$variable-prefix}-neutral-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $stones {
+    --#{$variable-prefix}-stone-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $reds {
+    --#{$variable-prefix}-red-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $oranges {
+    --#{$variable-prefix}-orange-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $ambers {
+    --#{$variable-prefix}-amber-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $yellows {
+    --#{$variable-prefix}-yellow-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $limes {
+    --#{$variable-prefix}-lime-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $greens {
+    --#{$variable-prefix}-green-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $emeralds {
+    --#{$variable-prefix}-emerald-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $teals {
+    --#{$variable-prefix}-teal-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $cyans {
+    --#{$variable-prefix}-cyan-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $skys {
+    --#{$variable-prefix}-sky-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $blues {
+    --#{$variable-prefix}-blue-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $indigos {
+    --#{$variable-prefix}-indigo-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $violets {
+    --#{$variable-prefix}-violet-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $purples {
+    --#{$variable-prefix}-purple-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $fuchsias {
+    --#{$variable-prefix}-fuchsia-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $pinks {
+    --#{$variable-prefix}-pink-#{$num}: #{$color}!important;
+  }
+  @each $num, $color in $roses {
+    --#{$variable-prefix}-rose-#{$num}: #{$color}!important;
+  }
+}

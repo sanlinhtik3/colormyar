@@ -1,0 +1,601 @@
+/*
+|
+|------------------
+| Docs : https://github.com/sanlinhtik3/colormyar
+| Version : 1.1.0
+| Auth : sanlinhtke
+| Copyright : 2021
+|-----------------
+|
+*/
+
+
+// scss-docs-start import-stack
+// Configuration
+@import 'variables';
+
+@import 'root';
+@import 'borders';
+@import 'effects';
+
+
+
+// _root.scss
+
+@each $num, $color in $slates {
+  .#{$variable-prefix} {
+    &-text-slat-#{$num} {
+      color: $color!important;
+    }
+    &-bg-slat-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-slat-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-slat-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $grays {
+  .#{$variable-prefix} {
+    &-text-gray-#{$num} {
+      color: $color!important;
+    }
+    &-bg-gray-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-gray-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-gray-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $zincs {
+  .#{$variable-prefix} {
+    &-text-zinc-#{$num} {
+      color: $color!important;
+    }
+    &-bg-zinc-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-zinc-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-zinc-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $neutrals {
+  .#{$variable-prefix} {
+    &-text-neutral-#{$num} {
+      color: $color!important;
+    }
+    &-bg-neutral-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-neutral-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-neutral-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $stones {
+  .#{$variable-prefix} {
+    &-text-stone-#{$num} {
+      color: $color!important;
+    }
+    &-bg-stone-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-stone-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-stone-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $reds {
+  .#{$variable-prefix} {
+    &-text-red-#{$num} {
+      color: $color!important;
+    }
+    &-bg-red-#{$num} {
+      background-color: $color!important;
+    }
+    &-outline-red-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $oranges {
+  .#{$variable-prefix} {
+    &-text-orange-#{$num} {
+      color: $color!important;
+    }
+    &-bg-orange-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-orange-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-orange-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $ambers {
+  .#{$variable-prefix} {
+    &-text-amber-#{$num} {
+      color: $color!important;
+    }
+    &-bg-amber-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-amber-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-amber-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $yellows {
+  .#{$variable-prefix} {
+    &-text-yellow-#{$num} {
+      color: $color!important;
+    }
+    &-bg-yellow-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-yellow-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-yellow-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $limes {
+  .#{$variable-prefix} {
+    &-text-lime-#{$num} {
+      color: $color!important;
+    }
+    &-bg-lime-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-lime-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-lime-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $greens {
+  .#{$variable-prefix} {
+    &-text-green-#{$num} {
+      color: $color!important;
+    }
+    &-bg-green-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-green-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-green-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $emeralds {
+  .#{$variable-prefix} {
+    &-text-emerald-#{$num} {
+      color: $color!important;
+    }
+    &-bg-emerald-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-emerald-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-emerald-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $teals {
+  .#{$variable-prefix} {
+    &-text-teal-#{$num} {
+      color: $color!important;
+    }
+    &-bg-teal-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-teal-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-teal-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $cyans {
+  .#{$variable-prefix} {
+    &-text-cyan-#{$num} {
+      color: $color!important;
+    }
+    &-bg-cyan-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-cyan-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-cyan-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $skys {
+  .#{$variable-prefix} {
+    &-text-sky-#{$num} {
+      color: $color!important;
+    }
+    &-bg-sky-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-sky-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-sky-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $blues {
+  .#{$variable-prefix} {
+    &-text-blue-#{$num} {
+      color: $color!important;
+    }
+    &-bg-blue-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-blue-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-blue-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $indigos {
+  .#{$variable-prefix} {
+    &-text-indigo-#{$num} {
+      color: $color!important;
+    }
+    &-bg-indigo-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-indigo-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-indigo-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $violets {
+  .#{$variable-prefix} {
+    &-text-violet-#{$num} {
+      color: $color!important;
+    }
+    &-bg-violet-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-violet-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-violet-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $purples {
+  .#{$variable-prefix} {
+    &-text-purple-#{$num} {
+      color: $color!important;
+    }
+    &-bg-purple-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-purple-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-purple-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $fuchsias {
+  .#{$variable-prefix} {
+    &-text-fuchsia-#{$num} {
+      color: $color!important;
+    }
+    &-bg-fuchsia-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-fuchsia-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-fuchsia-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $pinks {
+  .#{$variable-prefix} {
+    &-text-pink-#{$num} {
+      color: $color!important;
+    }
+    &-bg-pink-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-pink-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-pink-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+@each $num, $color in $roses {
+  .#{$variable-prefix} {
+    &-text-rose-#{$num} {
+      color: $color!important;
+    }
+    &-bg-rose-#{$num} {
+      background-color: $color!important;
+    }
+    &-border-rose-#{$num} {
+      border-color: $color!important;
+    }
+    &-outline-rose-#{$num} {
+      outline-color: $color!important;
+    }
+  }
+}
+
+
+//Borders
+//Rounded
+
+@each $property, $value in $roundeds {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded {
+        border-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-#{$property} {
+        border-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-t {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-t {
+        border-top-left-radius: $value!important;
+        border-top-right-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-t-#{$property} {
+        border-top-left-radius: $value!important;
+        border-top-right-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-r {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-r {
+        border-top-right-radius: $value!important;
+        border-bottom-right-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-r-#{$property} {
+        border-top-right-radius: $value!important;
+        border-bottom-right-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-b {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-b {
+        border-bottom-right-radius: $value!important;
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-b-#{$property} {
+        border-bottom-right-radius: $value!important;
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-l {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-l {
+        border-top-left-radius: $value!important;
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-l-#{$property} {
+        border-top-left-radius: $value!important;
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-tl {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-tl {
+        border-top-left-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-tl-#{$property} {
+        border-top-left-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-tr {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-tr {
+        border-top-right-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-tr-#{$property} {
+        border-top-right-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-br {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-br {
+        border-bottom-right-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-br-#{$property} {
+        border-bottom-right-radius: $value!important;
+      }
+    }
+  }
+}
+
+@each $property, $value in $roundeds-bl {
+  @if #{$property} == "" {
+    .#{$variable-prefix} {
+      &-rounded-bl {
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  } @else {
+    .#{$variable-prefix} {
+      &-rounded-bl-#{$property} {
+        border-bottom-left-radius: $value!important;
+      }
+    }
+  }
+}
+
+// Border Color
+// Utilities for controlling the style of an element's borders.
+
+@each $property, $value in $border-styles {
+  .border-#{$property} {
+    border-style: $value!important;
+    &:hover {
+      border-style: $value!important;
+    }
+  }
+}
+
+//Outline Width
+//Utilities for controlling the width of an element's outline.
+@each $property, $value in $outlines {
+  .outline-#{$property} {
+    outline-width: $value!important;
+  }
+}
+
+
+//Outline Color
+//Utilities for controlling the color of an element's outline.
+@each $property, $value in $col-vals {
+  .outline-#{$property} {
+    outline-color: $value!important;
+  }
+}
+
+//Outline Style
+//Utilities for controlling the style of an element's outline.
+.outline-none {
+  outline: 2px solid transparent!important;
+  outline-offset: 2px!important;
+}
+@each $property, $value in $border-styles {
+  @if #{$property} != "none" {
+    .outline-#{$property} {
+      outline-style: $value!important;
+    }
+  }
+}
+
+//Outline Offset
+//Utilities for controlling the offset of an element's outline.
+@each $property, $value in $outlines {
+  .outline-offest-#{$property} {
+    outline-offset: $value!important;
+  }
+}

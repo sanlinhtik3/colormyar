@@ -1,0 +1,4748 @@
+/*
+|
+|------------------
+| Docs : https://github.com/sanlinhtik3/pdfcolor
+| Version : 1.1.0
+| Auth : sanlinhtke
+| Copyright : 2021
+|-----------------
+|
+*/
+:root {
+  --pdf-slate-50: #f8fafc!important;
+  --pdf-slate-100: #f1f5f9!important;
+  --pdf-slate-200: #e2e8f0!important;
+  --pdf-slate-300: #cbd5e1!important;
+  --pdf-slate-400: #94a3b8!important;
+  --pdf-slate-500: #64748b!important;
+  --pdf-slate-600: #475569!important;
+  --pdf-slate-700: #334155!important;
+  --pdf-slate-800: #1e293b!important;
+  --pdf-slate-900: #0f172a!important;
+  --pdf-gray-50: #f9fafb!important;
+  --pdf-gray-100: #f3f4f6!important;
+  --pdf-gray-200: #e5e7eb!important;
+  --pdf-gray-300: #d1d5db!important;
+  --pdf-gray-400: #9ca3af!important;
+  --pdf-gray-500: #6b7280!important;
+  --pdf-gray-600: #4b5563!important;
+  --pdf-gray-700: #374151!important;
+  --pdf-gray-800: #1f2937!important;
+  --pdf-gray-900: #111827!important;
+  --pdf-zinc-50: #fafafa!important;
+  --pdf-zinc-100: #f4f4f5!important;
+  --pdf-zinc-200: #e4e4e7!important;
+  --pdf-zinc-300: #d4d4d8!important;
+  --pdf-zinc-400: #a1a1aa!important;
+  --pdf-zinc-500: #71717a!important;
+  --pdf-zinc-600: #52525b!important;
+  --pdf-zinc-700: #3f3f46!important;
+  --pdf-zinc-800: #27272a!important;
+  --pdf-zinc-900: #18181b!important;
+  --pdf-neutral-50: #fafafa!important;
+  --pdf-neutral-100: #f5f5f5!important;
+  --pdf-neutral-200: #e5e5e5!important;
+  --pdf-neutral-300: #d4d4d4!important;
+  --pdf-neutral-400: #a3a3a3!important;
+  --pdf-neutral-500: #737373!important;
+  --pdf-neutral-600: #525252!important;
+  --pdf-neutral-700: #404040!important;
+  --pdf-neutral-800: #262626!important;
+  --pdf-neutral-900: #171717!important;
+  --pdf-stone-50: #fafaf9!important;
+  --pdf-stone-100: #f5f5f4!important;
+  --pdf-stone-200: #e7e5e4!important;
+  --pdf-stone-300: #d6d3d1!important;
+  --pdf-stone-400: #a8a29e!important;
+  --pdf-stone-500: #78716c!important;
+  --pdf-stone-600: #57534e!important;
+  --pdf-stone-700: #44403c!important;
+  --pdf-stone-800: #292524!important;
+  --pdf-stone-900: #1c1917!important;
+  --pdf-red-50: #fef2f2!important;
+  --pdf-red-100: #fee2e2!important;
+  --pdf-red-200: #fecaca!important;
+  --pdf-red-300: #fca5a5!important;
+  --pdf-red-400: #f87171!important;
+  --pdf-red-500: #ef4444!important;
+  --pdf-red-600: #dc2626!important;
+  --pdf-red-700: #b91c1c!important;
+  --pdf-red-800: #991b1b!important;
+  --pdf-red-900: #7f1d1d!important;
+  --pdf-orange-50: #fff7ed!important;
+  --pdf-orange-100: #ffedd5!important;
+  --pdf-orange-200: #fed7aa!important;
+  --pdf-orange-300: #fdba74!important;
+  --pdf-orange-400: #fb923c!important;
+  --pdf-orange-500: #f97316!important;
+  --pdf-orange-600: #ea580c!important;
+  --pdf-orange-700: #c2410c!important;
+  --pdf-orange-800: #9a3412!important;
+  --pdf-orange-900: #7c2d12!important;
+  --pdf-amber-50: #fffbeb!important;
+  --pdf-amber-100: #fef3c7!important;
+  --pdf-amber-200: #fde68a!important;
+  --pdf-amber-300: #fcd34d!important;
+  --pdf-amber-400: #fbbf24!important;
+  --pdf-amber-500: #f59e0b!important;
+  --pdf-amber-600: #d97706!important;
+  --pdf-amber-700: #b45309!important;
+  --pdf-amber-800: #92400e!important;
+  --pdf-amber-900: #78350f!important;
+  --pdf-yellow-50: #fefce8!important;
+  --pdf-yellow-100: #fef9c3!important;
+  --pdf-yellow-200: #fef08a!important;
+  --pdf-yellow-300: #fde047!important;
+  --pdf-yellow-400: #facc15!important;
+  --pdf-yellow-500: #eab308!important;
+  --pdf-yellow-600: #ca8a04!important;
+  --pdf-yellow-700: #a16207!important;
+  --pdf-yellow-800: #854d0e!important;
+  --pdf-yellow-900: #713f12!important;
+  --pdf-lime-50: #f7fee7!important;
+  --pdf-lime-100: #ecfccb!important;
+  --pdf-lime-200: #d9f99d!important;
+  --pdf-lime-300: #bef264!important;
+  --pdf-lime-400: #a3e635!important;
+  --pdf-lime-500: #84cc16!important;
+  --pdf-lime-600: #65a30d!important;
+  --pdf-lime-700: #4d7c0f!important;
+  --pdf-lime-800: #3f6212!important;
+  --pdf-lime-900: #365314!important;
+  --pdf-green-50: #f0fdf4!important;
+  --pdf-green-100: #dcfce7!important;
+  --pdf-green-200: #bbf7d0!important;
+  --pdf-green-300: #86efac!important;
+  --pdf-green-400: #4ade80!important;
+  --pdf-green-500: #22c55e!important;
+  --pdf-green-600: #16a34a!important;
+  --pdf-green-700: #15803d!important;
+  --pdf-green-800: #166534!important;
+  --pdf-green-900: #14532d!important;
+  --pdf-emerald-50: #ecfdf5!important;
+  --pdf-emerald-100: #d1fae5!important;
+  --pdf-emerald-200: #a7f3d0!important;
+  --pdf-emerald-300: #6ee7b7!important;
+  --pdf-emerald-400: #34d399!important;
+  --pdf-emerald-500: #10b981!important;
+  --pdf-emerald-600: #059669!important;
+  --pdf-emerald-700: #047857!important;
+  --pdf-emerald-800: #065f46!important;
+  --pdf-emerald-900: #064e3b!important;
+  --pdf-teal-50: #f0fdfa!important;
+  --pdf-teal-100: #ccfbf1!important;
+  --pdf-teal-200: #99f6e4!important;
+  --pdf-teal-300: #5eead4!important;
+  --pdf-teal-400: #2dd4bf!important;
+  --pdf-teal-500: #14b8a6!important;
+  --pdf-teal-600: #0d9488!important;
+  --pdf-teal-700: #0f766e!important;
+  --pdf-teal-800: #115e59!important;
+  --pdf-teal-900: #134e4a!important;
+  --pdf-cyan-50: #ecfeff!important;
+  --pdf-cyan-100: #cffafe!important;
+  --pdf-cyan-200: #a5f3fc!important;
+  --pdf-cyan-300: #67e8f9!important;
+  --pdf-cyan-400: #22d3ee!important;
+  --pdf-cyan-500: #06b6d4!important;
+  --pdf-cyan-600: #0891b2!important;
+  --pdf-cyan-700: #0e7490!important;
+  --pdf-cyan-800: #155e75!important;
+  --pdf-cyan-900: #164e63!important;
+  --pdf-sky-50: #f0f9ff!important;
+  --pdf-sky-100: #e0f2fe!important;
+  --pdf-sky-200: #bae6fd!important;
+  --pdf-sky-300: #7dd3fc!important;
+  --pdf-sky-400: #38bdf8!important;
+  --pdf-sky-500: #0ea5e9!important;
+  --pdf-sky-600: #0284c7!important;
+  --pdf-sky-700: #0369a1!important;
+  --pdf-sky-800: #075985!important;
+  --pdf-sky-900: #0c4a6e!important;
+  --pdf-blue-50: #eff6ff!important;
+  --pdf-blue-100: #dbeafe!important;
+  --pdf-blue-200: #bfdbfe!important;
+  --pdf-blue-300: #93c5fd!important;
+  --pdf-blue-400: #60a5fa!important;
+  --pdf-blue-500: #3b82f6!important;
+  --pdf-blue-600: #2563eb!important;
+  --pdf-blue-700: #1d4ed8!important;
+  --pdf-blue-800: #1e40af!important;
+  --pdf-blue-900: #1e3a8a!important;
+  --pdf-indigo-50: #eef2ff!important;
+  --pdf-indigo-100: #e0e7ff!important;
+  --pdf-indigo-200: #c7d2fe!important;
+  --pdf-indigo-300: #a5b4fc!important;
+  --pdf-indigo-400: #818cf8!important;
+  --pdf-indigo-500: #6366f1!important;
+  --pdf-indigo-600: #4f46e5!important;
+  --pdf-indigo-700: #4338ca!important;
+  --pdf-indigo-800: #3730a3!important;
+  --pdf-indigo-900: #312e81!important;
+  --pdf-violet-50: #f5f3ff!important;
+  --pdf-violet-100: #ede9fe!important;
+  --pdf-violet-200: #ddd6fe!important;
+  --pdf-violet-300: #c4b5fd!important;
+  --pdf-violet-400: #a78bfa!important;
+  --pdf-violet-500: #8b5cf6!important;
+  --pdf-violet-600: #7c3aed!important;
+  --pdf-violet-700: #6d28d9!important;
+  --pdf-violet-800: #5b21b6!important;
+  --pdf-violet-900: #4c1d95!important;
+  --pdf-purple-50: #faf5ff!important;
+  --pdf-purple-100: #f3e8ff!important;
+  --pdf-purple-200: #e9d5ff!important;
+  --pdf-purple-300: #d8b4fe!important;
+  --pdf-purple-400: #c084fc!important;
+  --pdf-purple-500: #a855f7!important;
+  --pdf-purple-600: #9333ea!important;
+  --pdf-purple-700: #7e22ce!important;
+  --pdf-purple-800: #6b21a8!important;
+  --pdf-purple-900: #581c87!important;
+  --pdf-fuchsia-50: #fdf4ff!important;
+  --pdf-fuchsia-100: #fae8ff!important;
+  --pdf-fuchsia-200: #f5d0fe!important;
+  --pdf-fuchsia-300: #f0abfc!important;
+  --pdf-fuchsia-400: #e879f9!important;
+  --pdf-fuchsia-500: #d946ef!important;
+  --pdf-fuchsia-600: #c026d3!important;
+  --pdf-fuchsia-700: #a21caf!important;
+  --pdf-fuchsia-800: #86198f!important;
+  --pdf-fuchsia-900: #701a75!important;
+  --pdf-pink-50: #fdf2f8!important;
+  --pdf-pink-100: #fce7f3!important;
+  --pdf-pink-200: #fbcfe8!important;
+  --pdf-pink-300: #f9a8d4!important;
+  --pdf-pink-400: #f472b6!important;
+  --pdf-pink-500: #ec4899!important;
+  --pdf-pink-600: #db2777!important;
+  --pdf-pink-700: #be185d!important;
+  --pdf-pink-800: #9d174d!important;
+  --pdf-pink-900: #831843!important;
+  --pdf-rose-50: #fdf2f8!important;
+  --pdf-rose-100: #fce7f3!important;
+  --pdf-rose-200: #fbcfe8!important;
+  --pdf-rose-300: #f9a8d4!important;
+  --pdf-rose-400: #f472b6!important;
+  --pdf-rose-500: #ec4899!important;
+  --pdf-rose-600: #db2777!important;
+  --pdf-rose-700: #be185d!important;
+  --pdf-rose-800: #9d174d!important;
+  --pdf-rose-900: #831843!important;
+}
+
+.shadow-sm {
+  box-shadow: var(--pdf-shadow) !important;
+}
+
+.shadow-sm {
+  --pdf-shadow: 0.125rem !important;
+  --pdf-shadow-colored: 0 1px 2px var(--pdf-shadow-color) !important;
+}
+
+.shadow {
+  box-shadow: var(--pdf-shadow) !important;
+}
+
+.shadow {
+  --pdf-shadow: 0.25rem !important;
+  --pdf-shadow-colored: 0 1px 3px 0 var(--pdf-shadow-color), 0 1px 2px -1px var(--pdf-shadow-color) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--pdf-shadow) !important;
+}
+
+.shadow-md {
+  --pdf-shadow: 0.375rem !important;
+  --pdf-shadow-colored: 0 4px 6px -1px var(--pdf-shadow-color), 0 2px 4px -2px var(--pdf-shadow-color) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--pdf-shadow) !important;
+}
+
+.shadow-lg {
+  --pdf-shadow: 0.5rem !important;
+  --pdf-shadow-colored: 0 10px 15px -3px var(--pdf-shadow-color), 0 4px 6px -4px var(--pdf-shadow-color) !important;
+}
+
+.shadow-xl {
+  box-shadow: var(--pdf-shadow);
+}
+
+.shadow-xl {
+  --pdf-shadow: 0.75rem;
+  --pdf-shadow-colored: 0 20px 25px -5px var(--pdf-shadow-color), 0 8px 10px -6px var(--pdf-shadow-color);
+}
+
+.shadow-2xl {
+  box-shadow: var(--pdf-shadow);
+}
+
+.shadow-2xl {
+  --pdf-shadow: 1rem;
+  --pdf-shadow-colored: 0 25px 50px -12px var(--pdf-shadow-color);
+}
+
+.shadow-inner {
+  box-shadow: var(--pdf-shadow);
+}
+
+.shadow-inner {
+  --pdf-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --pdf-shadow-colored: inset 0 2px 4px 0 var(--pdf-shadow-color);
+}
+
+.shadow-none {
+  box-shadow: var(--pdf-shadow);
+}
+
+.shadow-none {
+  --pdf-shadow: 0;
+  --pdf-shadow-colored: 0 0 #0000;
+}
+
+.shadow-inherit {
+  --pdf-shadow: var(--pdf-shadow-colored);
+  --pdf-shadow-color: inherit!important;
+}
+
+.shadow-current {
+  --pdf-shadow: var(--pdf-shadow-colored);
+  --pdf-shadow-color: currentColor!important;
+}
+
+.shadow-transparent {
+  --pdf-shadow: var(--pdf-shadow-colored);
+  --pdf-shadow-color: transparent!important;
+}
+
+.shadow-black {
+  --pdf-shadow: var(--pdf-shadow-colored);
+  --pdf-shadow-color: #000!important;
+}
+
+.shadow-white {
+  --pdf-shadow: var(--pdf-shadow-colored);
+  --pdf-shadow-color: #fff!important;
+}
+
+.shadow-slate-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f8fafc80 !important;
+}
+
+.shadow-slate-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f1f5f980 !important;
+}
+
+.shadow-slate-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e2e8f080 !important;
+}
+
+.shadow-slate-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #cbd5e180 !important;
+}
+
+.shadow-slate-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #94a3b880 !important;
+}
+
+.shadow-slate-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #64748b80 !important;
+}
+
+.shadow-slate-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #47556980 !important;
+}
+
+.shadow-slate-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #33415580 !important;
+}
+
+.shadow-slate-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1e293b80 !important;
+}
+
+.shadow-slate-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0f172a80 !important;
+}
+
+.shadow-gray-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f9fafb80 !important;
+}
+
+.shadow-gray-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f3f4f680 !important;
+}
+
+.shadow-gray-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e5e7eb80 !important;
+}
+
+.shadow-gray-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d1d5db80 !important;
+}
+
+.shadow-gray-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #9ca3af80 !important;
+}
+
+.shadow-gray-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #6b728080 !important;
+}
+
+.shadow-gray-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4b556380 !important;
+}
+
+.shadow-gray-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #37415180 !important;
+}
+
+.shadow-gray-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1f293780 !important;
+}
+
+.shadow-gray-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #11182780 !important;
+}
+
+.shadow-zinc-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fafafa80 !important;
+}
+
+.shadow-zinc-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f4f4f580 !important;
+}
+
+.shadow-zinc-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e4e4e780 !important;
+}
+
+.shadow-zinc-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d4d4d880 !important;
+}
+
+.shadow-zinc-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a1a1aa80 !important;
+}
+
+.shadow-zinc-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #71717a80 !important;
+}
+
+.shadow-zinc-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #52525b80 !important;
+}
+
+.shadow-zinc-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #3f3f4680 !important;
+}
+
+.shadow-zinc-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #27272a80 !important;
+}
+
+.shadow-zinc-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #18181b80 !important;
+}
+
+.shadow-neutral-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fafafa80 !important;
+}
+
+.shadow-neutral-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f5f5f580 !important;
+}
+
+.shadow-neutral-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e5e5e580 !important;
+}
+
+.shadow-neutral-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d4d4d480 !important;
+}
+
+.shadow-neutral-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a3a3a380 !important;
+}
+
+.shadow-neutral-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #73737380 !important;
+}
+
+.shadow-neutral-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #52525280 !important;
+}
+
+.shadow-neutral-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #40404080 !important;
+}
+
+.shadow-neutral-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #26262680 !important;
+}
+
+.shadow-neutral-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #17171780 !important;
+}
+
+.shadow-stone-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fafaf980 !important;
+}
+
+.shadow-stone-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f5f5f480 !important;
+}
+
+.shadow-stone-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e7e5e480 !important;
+}
+
+.shadow-stone-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d6d3d180 !important;
+}
+
+.shadow-stone-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a8a29e80 !important;
+}
+
+.shadow-stone-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #78716c80 !important;
+}
+
+.shadow-stone-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #57534e80 !important;
+}
+
+.shadow-stone-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #44403c80 !important;
+}
+
+.shadow-stone-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #29252480 !important;
+}
+
+.shadow-stone-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1c191780 !important;
+}
+
+.shadow-red-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fef2f280 !important;
+}
+
+.shadow-red-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fee2e280 !important;
+}
+
+.shadow-red-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fecaca80 !important;
+}
+
+.shadow-red-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fca5a580 !important;
+}
+
+.shadow-red-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f8717180 !important;
+}
+
+.shadow-red-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ef444480 !important;
+}
+
+.shadow-red-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #dc262680 !important;
+}
+
+.shadow-red-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #b91c1c80 !important;
+}
+
+.shadow-red-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #991b1b80 !important;
+}
+
+.shadow-red-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #7f1d1d80 !important;
+}
+
+.shadow-orange-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fff7ed80 !important;
+}
+
+.shadow-orange-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ffedd580 !important;
+}
+
+.shadow-orange-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fed7aa80 !important;
+}
+
+.shadow-orange-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fdba7480 !important;
+}
+
+.shadow-orange-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fb923c80 !important;
+}
+
+.shadow-orange-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f9731680 !important;
+}
+
+.shadow-orange-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ea580c80 !important;
+}
+
+.shadow-orange-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #c2410c80 !important;
+}
+
+.shadow-orange-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #9a341280 !important;
+}
+
+.shadow-orange-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #7c2d1280 !important;
+}
+
+.shadow-amber-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fffbeb80 !important;
+}
+
+.shadow-amber-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fef3c780 !important;
+}
+
+.shadow-amber-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fde68a80 !important;
+}
+
+.shadow-amber-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fcd34d80 !important;
+}
+
+.shadow-amber-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fbbf2480 !important;
+}
+
+.shadow-amber-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f59e0b80 !important;
+}
+
+.shadow-amber-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d9770680 !important;
+}
+
+.shadow-amber-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #b4530980 !important;
+}
+
+.shadow-amber-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #92400e80 !important;
+}
+
+.shadow-amber-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #78350f80 !important;
+}
+
+.shadow-yellow-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fefce880 !important;
+}
+
+.shadow-yellow-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fef9c380 !important;
+}
+
+.shadow-yellow-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fef08a80 !important;
+}
+
+.shadow-yellow-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fde04780 !important;
+}
+
+.shadow-yellow-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #facc1580 !important;
+}
+
+.shadow-yellow-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #eab30880 !important;
+}
+
+.shadow-yellow-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ca8a0480 !important;
+}
+
+.shadow-yellow-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a1620780 !important;
+}
+
+.shadow-yellow-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #854d0e80 !important;
+}
+
+.shadow-yellow-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #713f1280 !important;
+}
+
+.shadow-lime-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f7fee780 !important;
+}
+
+.shadow-lime-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ecfccb80 !important;
+}
+
+.shadow-lime-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d9f99d80 !important;
+}
+
+.shadow-lime-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #bef26480 !important;
+}
+
+.shadow-lime-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a3e63580 !important;
+}
+
+.shadow-lime-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #84cc1680 !important;
+}
+
+.shadow-lime-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #65a30d80 !important;
+}
+
+.shadow-lime-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4d7c0f80 !important;
+}
+
+.shadow-lime-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #3f621280 !important;
+}
+
+.shadow-lime-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #36531480 !important;
+}
+
+.shadow-green-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f0fdf480 !important;
+}
+
+.shadow-green-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #dcfce780 !important;
+}
+
+.shadow-green-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #bbf7d080 !important;
+}
+
+.shadow-green-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #86efac80 !important;
+}
+
+.shadow-green-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4ade8080 !important;
+}
+
+.shadow-green-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #22c55e80 !important;
+}
+
+.shadow-green-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #16a34a80 !important;
+}
+
+.shadow-green-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #15803d80 !important;
+}
+
+.shadow-green-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #16653480 !important;
+}
+
+.shadow-green-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #14532d80 !important;
+}
+
+.shadow-emerald-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ecfdf580 !important;
+}
+
+.shadow-emerald-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d1fae580 !important;
+}
+
+.shadow-emerald-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a7f3d080 !important;
+}
+
+.shadow-emerald-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #6ee7b780 !important;
+}
+
+.shadow-emerald-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #34d39980 !important;
+}
+
+.shadow-emerald-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #10b98180 !important;
+}
+
+.shadow-emerald-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #05966980 !important;
+}
+
+.shadow-emerald-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #04785780 !important;
+}
+
+.shadow-emerald-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #065f4680 !important;
+}
+
+.shadow-emerald-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #064e3b80 !important;
+}
+
+.shadow-teal-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f0fdfa80 !important;
+}
+
+.shadow-teal-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ccfbf180 !important;
+}
+
+.shadow-teal-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #99f6e480 !important;
+}
+
+.shadow-teal-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #5eead480 !important;
+}
+
+.shadow-teal-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #2dd4bf80 !important;
+}
+
+.shadow-teal-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #14b8a680 !important;
+}
+
+.shadow-teal-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0d948880 !important;
+}
+
+.shadow-teal-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0f766e80 !important;
+}
+
+.shadow-teal-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #115e5980 !important;
+}
+
+.shadow-teal-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #134e4a80 !important;
+}
+
+.shadow-cyan-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ecfeff80 !important;
+}
+
+.shadow-cyan-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #cffafe80 !important;
+}
+
+.shadow-cyan-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a5f3fc80 !important;
+}
+
+.shadow-cyan-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #67e8f980 !important;
+}
+
+.shadow-cyan-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #22d3ee80 !important;
+}
+
+.shadow-cyan-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #06b6d480 !important;
+}
+
+.shadow-cyan-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0891b280 !important;
+}
+
+.shadow-cyan-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0e749080 !important;
+}
+
+.shadow-cyan-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #155e7580 !important;
+}
+
+.shadow-cyan-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #164e6380 !important;
+}
+
+.shadow-sky-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f0f9ff80 !important;
+}
+
+.shadow-sky-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e0f2fe80 !important;
+}
+
+.shadow-sky-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #bae6fd80 !important;
+}
+
+.shadow-sky-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #7dd3fc80 !important;
+}
+
+.shadow-sky-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #38bdf880 !important;
+}
+
+.shadow-sky-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0ea5e980 !important;
+}
+
+.shadow-sky-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0284c780 !important;
+}
+
+.shadow-sky-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0369a180 !important;
+}
+
+.shadow-sky-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #07598580 !important;
+}
+
+.shadow-sky-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #0c4a6e80 !important;
+}
+
+.shadow-blue-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #eff6ff80 !important;
+}
+
+.shadow-blue-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #dbeafe80 !important;
+}
+
+.shadow-blue-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #bfdbfe80 !important;
+}
+
+.shadow-blue-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #93c5fd80 !important;
+}
+
+.shadow-blue-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #60a5fa80 !important;
+}
+
+.shadow-blue-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #3b82f680 !important;
+}
+
+.shadow-blue-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #2563eb80 !important;
+}
+
+.shadow-blue-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1d4ed880 !important;
+}
+
+.shadow-blue-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1e40af80 !important;
+}
+
+.shadow-blue-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #1e3a8a80 !important;
+}
+
+.shadow-indigo-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #eef2ff80 !important;
+}
+
+.shadow-indigo-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e0e7ff80 !important;
+}
+
+.shadow-indigo-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #c7d2fe80 !important;
+}
+
+.shadow-indigo-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a5b4fc80 !important;
+}
+
+.shadow-indigo-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #818cf880 !important;
+}
+
+.shadow-indigo-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #6366f180 !important;
+}
+
+.shadow-indigo-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4f46e580 !important;
+}
+
+.shadow-indigo-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4338ca80 !important;
+}
+
+.shadow-indigo-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #3730a380 !important;
+}
+
+.shadow-indigo-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #312e8180 !important;
+}
+
+.shadow-violet-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f5f3ff80 !important;
+}
+
+.shadow-violet-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ede9fe80 !important;
+}
+
+.shadow-violet-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ddd6fe80 !important;
+}
+
+.shadow-violet-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #c4b5fd80 !important;
+}
+
+.shadow-violet-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a78bfa80 !important;
+}
+
+.shadow-violet-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #8b5cf680 !important;
+}
+
+.shadow-violet-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #7c3aed80 !important;
+}
+
+.shadow-violet-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #6d28d980 !important;
+}
+
+.shadow-violet-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #5b21b680 !important;
+}
+
+.shadow-violet-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #4c1d9580 !important;
+}
+
+.shadow-purple-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #faf5ff80 !important;
+}
+
+.shadow-purple-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f3e8ff80 !important;
+}
+
+.shadow-purple-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e9d5ff80 !important;
+}
+
+.shadow-purple-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d8b4fe80 !important;
+}
+
+.shadow-purple-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #c084fc80 !important;
+}
+
+.shadow-purple-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a855f780 !important;
+}
+
+.shadow-purple-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #9333ea80 !important;
+}
+
+.shadow-purple-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #7e22ce80 !important;
+}
+
+.shadow-purple-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #6b21a880 !important;
+}
+
+.shadow-purple-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #581c8780 !important;
+}
+
+.shadow-fuchsia-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fdf4ff80 !important;
+}
+
+.shadow-fuchsia-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fae8ff80 !important;
+}
+
+.shadow-fuchsia-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f5d0fe80 !important;
+}
+
+.shadow-fuchsia-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f0abfc80 !important;
+}
+
+.shadow-fuchsia-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #e879f980 !important;
+}
+
+.shadow-fuchsia-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #d946ef80 !important;
+}
+
+.shadow-fuchsia-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #c026d380 !important;
+}
+
+.shadow-fuchsia-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #a21caf80 !important;
+}
+
+.shadow-fuchsia-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #86198f80 !important;
+}
+
+.shadow-fuchsia-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #701a7580 !important;
+}
+
+.shadow-pink-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fdf2f880 !important;
+}
+
+.shadow-pink-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fce7f380 !important;
+}
+
+.shadow-pink-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fbcfe880 !important;
+}
+
+.shadow-pink-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f9a8d480 !important;
+}
+
+.shadow-pink-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f472b680 !important;
+}
+
+.shadow-pink-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ec489980 !important;
+}
+
+.shadow-pink-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #db277780 !important;
+}
+
+.shadow-pink-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #be185d80 !important;
+}
+
+.shadow-pink-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #9d174d80 !important;
+}
+
+.shadow-pink-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #83184380 !important;
+}
+
+.shadow-rose-50 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fdf2f880 !important;
+}
+
+.shadow-rose-100 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fce7f380 !important;
+}
+
+.shadow-rose-200 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #fbcfe880 !important;
+}
+
+.shadow-rose-300 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f9a8d480 !important;
+}
+
+.shadow-rose-400 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #f472b680 !important;
+}
+
+.shadow-rose-500 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #ec489980 !important;
+}
+
+.shadow-rose-600 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #db277780 !important;
+}
+
+.shadow-rose-700 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #be185d80 !important;
+}
+
+.shadow-rose-800 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #9d174d80 !important;
+}
+
+.shadow-rose-900 {
+  --pdf-shadow: var(--pdf-shadow-colored) !important;
+  --pdf-shadow-color: #83184380 !important;
+}
+
+.pdf-text-slat-50 {
+  color: #f8fafc !important;
+}
+.pdf-bg-slat-50 {
+  background-color: #f8fafc !important;
+}
+.pdf-border-slat-50 {
+  border-color: #f8fafc !important;
+}
+.pdf-outline-slat-50 {
+  outline-color: #f8fafc !important;
+}
+
+.pdf-text-slat-100 {
+  color: #f1f5f9 !important;
+}
+.pdf-bg-slat-100 {
+  background-color: #f1f5f9 !important;
+}
+.pdf-border-slat-100 {
+  border-color: #f1f5f9 !important;
+}
+.pdf-outline-slat-100 {
+  outline-color: #f1f5f9 !important;
+}
+
+.pdf-text-slat-200 {
+  color: #e2e8f0 !important;
+}
+.pdf-bg-slat-200 {
+  background-color: #e2e8f0 !important;
+}
+.pdf-border-slat-200 {
+  border-color: #e2e8f0 !important;
+}
+.pdf-outline-slat-200 {
+  outline-color: #e2e8f0 !important;
+}
+
+.pdf-text-slat-300 {
+  color: #cbd5e1 !important;
+}
+.pdf-bg-slat-300 {
+  background-color: #cbd5e1 !important;
+}
+.pdf-border-slat-300 {
+  border-color: #cbd5e1 !important;
+}
+.pdf-outline-slat-300 {
+  outline-color: #cbd5e1 !important;
+}
+
+.pdf-text-slat-400 {
+  color: #94a3b8 !important;
+}
+.pdf-bg-slat-400 {
+  background-color: #94a3b8 !important;
+}
+.pdf-border-slat-400 {
+  border-color: #94a3b8 !important;
+}
+.pdf-outline-slat-400 {
+  outline-color: #94a3b8 !important;
+}
+
+.pdf-text-slat-500 {
+  color: #64748b !important;
+}
+.pdf-bg-slat-500 {
+  background-color: #64748b !important;
+}
+.pdf-border-slat-500 {
+  border-color: #64748b !important;
+}
+.pdf-outline-slat-500 {
+  outline-color: #64748b !important;
+}
+
+.pdf-text-slat-600 {
+  color: #475569 !important;
+}
+.pdf-bg-slat-600 {
+  background-color: #475569 !important;
+}
+.pdf-border-slat-600 {
+  border-color: #475569 !important;
+}
+.pdf-outline-slat-600 {
+  outline-color: #475569 !important;
+}
+
+.pdf-text-slat-700 {
+  color: #334155 !important;
+}
+.pdf-bg-slat-700 {
+  background-color: #334155 !important;
+}
+.pdf-border-slat-700 {
+  border-color: #334155 !important;
+}
+.pdf-outline-slat-700 {
+  outline-color: #334155 !important;
+}
+
+.pdf-text-slat-800 {
+  color: #1e293b !important;
+}
+.pdf-bg-slat-800 {
+  background-color: #1e293b !important;
+}
+.pdf-border-slat-800 {
+  border-color: #1e293b !important;
+}
+.pdf-outline-slat-800 {
+  outline-color: #1e293b !important;
+}
+
+.pdf-text-slat-900 {
+  color: #0f172a !important;
+}
+.pdf-bg-slat-900 {
+  background-color: #0f172a !important;
+}
+.pdf-border-slat-900 {
+  border-color: #0f172a !important;
+}
+.pdf-outline-slat-900 {
+  outline-color: #0f172a !important;
+}
+
+.pdf-text-gray-50 {
+  color: #f9fafb !important;
+}
+.pdf-bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+.pdf-border-gray-50 {
+  border-color: #f9fafb !important;
+}
+.pdf-outline-gray-50 {
+  outline-color: #f9fafb !important;
+}
+
+.pdf-text-gray-100 {
+  color: #f3f4f6 !important;
+}
+.pdf-bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+.pdf-border-gray-100 {
+  border-color: #f3f4f6 !important;
+}
+.pdf-outline-gray-100 {
+  outline-color: #f3f4f6 !important;
+}
+
+.pdf-text-gray-200 {
+  color: #e5e7eb !important;
+}
+.pdf-bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+.pdf-border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+.pdf-outline-gray-200 {
+  outline-color: #e5e7eb !important;
+}
+
+.pdf-text-gray-300 {
+  color: #d1d5db !important;
+}
+.pdf-bg-gray-300 {
+  background-color: #d1d5db !important;
+}
+.pdf-border-gray-300 {
+  border-color: #d1d5db !important;
+}
+.pdf-outline-gray-300 {
+  outline-color: #d1d5db !important;
+}
+
+.pdf-text-gray-400 {
+  color: #9ca3af !important;
+}
+.pdf-bg-gray-400 {
+  background-color: #9ca3af !important;
+}
+.pdf-border-gray-400 {
+  border-color: #9ca3af !important;
+}
+.pdf-outline-gray-400 {
+  outline-color: #9ca3af !important;
+}
+
+.pdf-text-gray-500 {
+  color: #6b7280 !important;
+}
+.pdf-bg-gray-500 {
+  background-color: #6b7280 !important;
+}
+.pdf-border-gray-500 {
+  border-color: #6b7280 !important;
+}
+.pdf-outline-gray-500 {
+  outline-color: #6b7280 !important;
+}
+
+.pdf-text-gray-600 {
+  color: #4b5563 !important;
+}
+.pdf-bg-gray-600 {
+  background-color: #4b5563 !important;
+}
+.pdf-border-gray-600 {
+  border-color: #4b5563 !important;
+}
+.pdf-outline-gray-600 {
+  outline-color: #4b5563 !important;
+}
+
+.pdf-text-gray-700 {
+  color: #374151 !important;
+}
+.pdf-bg-gray-700 {
+  background-color: #374151 !important;
+}
+.pdf-border-gray-700 {
+  border-color: #374151 !important;
+}
+.pdf-outline-gray-700 {
+  outline-color: #374151 !important;
+}
+
+.pdf-text-gray-800 {
+  color: #1f2937 !important;
+}
+.pdf-bg-gray-800 {
+  background-color: #1f2937 !important;
+}
+.pdf-border-gray-800 {
+  border-color: #1f2937 !important;
+}
+.pdf-outline-gray-800 {
+  outline-color: #1f2937 !important;
+}
+
+.pdf-text-gray-900 {
+  color: #111827 !important;
+}
+.pdf-bg-gray-900 {
+  background-color: #111827 !important;
+}
+.pdf-border-gray-900 {
+  border-color: #111827 !important;
+}
+.pdf-outline-gray-900 {
+  outline-color: #111827 !important;
+}
+
+.pdf-text-zinc-50 {
+  color: #fafafa !important;
+}
+.pdf-bg-zinc-50 {
+  background-color: #fafafa !important;
+}
+.pdf-border-zinc-50 {
+  border-color: #fafafa !important;
+}
+.pdf-outline-zinc-50 {
+  outline-color: #fafafa !important;
+}
+
+.pdf-text-zinc-100 {
+  color: #f4f4f5 !important;
+}
+.pdf-bg-zinc-100 {
+  background-color: #f4f4f5 !important;
+}
+.pdf-border-zinc-100 {
+  border-color: #f4f4f5 !important;
+}
+.pdf-outline-zinc-100 {
+  outline-color: #f4f4f5 !important;
+}
+
+.pdf-text-zinc-200 {
+  color: #e4e4e7 !important;
+}
+.pdf-bg-zinc-200 {
+  background-color: #e4e4e7 !important;
+}
+.pdf-border-zinc-200 {
+  border-color: #e4e4e7 !important;
+}
+.pdf-outline-zinc-200 {
+  outline-color: #e4e4e7 !important;
+}
+
+.pdf-text-zinc-300 {
+  color: #d4d4d8 !important;
+}
+.pdf-bg-zinc-300 {
+  background-color: #d4d4d8 !important;
+}
+.pdf-border-zinc-300 {
+  border-color: #d4d4d8 !important;
+}
+.pdf-outline-zinc-300 {
+  outline-color: #d4d4d8 !important;
+}
+
+.pdf-text-zinc-400 {
+  color: #a1a1aa !important;
+}
+.pdf-bg-zinc-400 {
+  background-color: #a1a1aa !important;
+}
+.pdf-border-zinc-400 {
+  border-color: #a1a1aa !important;
+}
+.pdf-outline-zinc-400 {
+  outline-color: #a1a1aa !important;
+}
+
+.pdf-text-zinc-500 {
+  color: #71717a !important;
+}
+.pdf-bg-zinc-500 {
+  background-color: #71717a !important;
+}
+.pdf-border-zinc-500 {
+  border-color: #71717a !important;
+}
+.pdf-outline-zinc-500 {
+  outline-color: #71717a !important;
+}
+
+.pdf-text-zinc-600 {
+  color: #52525b !important;
+}
+.pdf-bg-zinc-600 {
+  background-color: #52525b !important;
+}
+.pdf-border-zinc-600 {
+  border-color: #52525b !important;
+}
+.pdf-outline-zinc-600 {
+  outline-color: #52525b !important;
+}
+
+.pdf-text-zinc-700 {
+  color: #3f3f46 !important;
+}
+.pdf-bg-zinc-700 {
+  background-color: #3f3f46 !important;
+}
+.pdf-border-zinc-700 {
+  border-color: #3f3f46 !important;
+}
+.pdf-outline-zinc-700 {
+  outline-color: #3f3f46 !important;
+}
+
+.pdf-text-zinc-800 {
+  color: #27272a !important;
+}
+.pdf-bg-zinc-800 {
+  background-color: #27272a !important;
+}
+.pdf-border-zinc-800 {
+  border-color: #27272a !important;
+}
+.pdf-outline-zinc-800 {
+  outline-color: #27272a !important;
+}
+
+.pdf-text-zinc-900 {
+  color: #18181b !important;
+}
+.pdf-bg-zinc-900 {
+  background-color: #18181b !important;
+}
+.pdf-border-zinc-900 {
+  border-color: #18181b !important;
+}
+.pdf-outline-zinc-900 {
+  outline-color: #18181b !important;
+}
+
+.pdf-text-neutral-50 {
+  color: #fafafa !important;
+}
+.pdf-bg-neutral-50 {
+  background-color: #fafafa !important;
+}
+.pdf-border-neutral-50 {
+  border-color: #fafafa !important;
+}
+.pdf-outline-neutral-50 {
+  outline-color: #fafafa !important;
+}
+
+.pdf-text-neutral-100 {
+  color: #f5f5f5 !important;
+}
+.pdf-bg-neutral-100 {
+  background-color: #f5f5f5 !important;
+}
+.pdf-border-neutral-100 {
+  border-color: #f5f5f5 !important;
+}
+.pdf-outline-neutral-100 {
+  outline-color: #f5f5f5 !important;
+}
+
+.pdf-text-neutral-200 {
+  color: #e5e5e5 !important;
+}
+.pdf-bg-neutral-200 {
+  background-color: #e5e5e5 !important;
+}
+.pdf-border-neutral-200 {
+  border-color: #e5e5e5 !important;
+}
+.pdf-outline-neutral-200 {
+  outline-color: #e5e5e5 !important;
+}
+
+.pdf-text-neutral-300 {
+  color: #d4d4d4 !important;
+}
+.pdf-bg-neutral-300 {
+  background-color: #d4d4d4 !important;
+}
+.pdf-border-neutral-300 {
+  border-color: #d4d4d4 !important;
+}
+.pdf-outline-neutral-300 {
+  outline-color: #d4d4d4 !important;
+}
+
+.pdf-text-neutral-400 {
+  color: #a3a3a3 !important;
+}
+.pdf-bg-neutral-400 {
+  background-color: #a3a3a3 !important;
+}
+.pdf-border-neutral-400 {
+  border-color: #a3a3a3 !important;
+}
+.pdf-outline-neutral-400 {
+  outline-color: #a3a3a3 !important;
+}
+
+.pdf-text-neutral-500 {
+  color: #737373 !important;
+}
+.pdf-bg-neutral-500 {
+  background-color: #737373 !important;
+}
+.pdf-border-neutral-500 {
+  border-color: #737373 !important;
+}
+.pdf-outline-neutral-500 {
+  outline-color: #737373 !important;
+}
+
+.pdf-text-neutral-600 {
+  color: #525252 !important;
+}
+.pdf-bg-neutral-600 {
+  background-color: #525252 !important;
+}
+.pdf-border-neutral-600 {
+  border-color: #525252 !important;
+}
+.pdf-outline-neutral-600 {
+  outline-color: #525252 !important;
+}
+
+.pdf-text-neutral-700 {
+  color: #404040 !important;
+}
+.pdf-bg-neutral-700 {
+  background-color: #404040 !important;
+}
+.pdf-border-neutral-700 {
+  border-color: #404040 !important;
+}
+.pdf-outline-neutral-700 {
+  outline-color: #404040 !important;
+}
+
+.pdf-text-neutral-800 {
+  color: #262626 !important;
+}
+.pdf-bg-neutral-800 {
+  background-color: #262626 !important;
+}
+.pdf-border-neutral-800 {
+  border-color: #262626 !important;
+}
+.pdf-outline-neutral-800 {
+  outline-color: #262626 !important;
+}
+
+.pdf-text-neutral-900 {
+  color: #171717 !important;
+}
+.pdf-bg-neutral-900 {
+  background-color: #171717 !important;
+}
+.pdf-border-neutral-900 {
+  border-color: #171717 !important;
+}
+.pdf-outline-neutral-900 {
+  outline-color: #171717 !important;
+}
+
+.pdf-text-stone-50 {
+  color: #fafaf9 !important;
+}
+.pdf-bg-stone-50 {
+  background-color: #fafaf9 !important;
+}
+.pdf-border-stone-50 {
+  border-color: #fafaf9 !important;
+}
+.pdf-outline-stone-50 {
+  outline-color: #fafaf9 !important;
+}
+
+.pdf-text-stone-100 {
+  color: #f5f5f4 !important;
+}
+.pdf-bg-stone-100 {
+  background-color: #f5f5f4 !important;
+}
+.pdf-border-stone-100 {
+  border-color: #f5f5f4 !important;
+}
+.pdf-outline-stone-100 {
+  outline-color: #f5f5f4 !important;
+}
+
+.pdf-text-stone-200 {
+  color: #e7e5e4 !important;
+}
+.pdf-bg-stone-200 {
+  background-color: #e7e5e4 !important;
+}
+.pdf-border-stone-200 {
+  border-color: #e7e5e4 !important;
+}
+.pdf-outline-stone-200 {
+  outline-color: #e7e5e4 !important;
+}
+
+.pdf-text-stone-300 {
+  color: #d6d3d1 !important;
+}
+.pdf-bg-stone-300 {
+  background-color: #d6d3d1 !important;
+}
+.pdf-border-stone-300 {
+  border-color: #d6d3d1 !important;
+}
+.pdf-outline-stone-300 {
+  outline-color: #d6d3d1 !important;
+}
+
+.pdf-text-stone-400 {
+  color: #a8a29e !important;
+}
+.pdf-bg-stone-400 {
+  background-color: #a8a29e !important;
+}
+.pdf-border-stone-400 {
+  border-color: #a8a29e !important;
+}
+.pdf-outline-stone-400 {
+  outline-color: #a8a29e !important;
+}
+
+.pdf-text-stone-500 {
+  color: #78716c !important;
+}
+.pdf-bg-stone-500 {
+  background-color: #78716c !important;
+}
+.pdf-border-stone-500 {
+  border-color: #78716c !important;
+}
+.pdf-outline-stone-500 {
+  outline-color: #78716c !important;
+}
+
+.pdf-text-stone-600 {
+  color: #57534e !important;
+}
+.pdf-bg-stone-600 {
+  background-color: #57534e !important;
+}
+.pdf-border-stone-600 {
+  border-color: #57534e !important;
+}
+.pdf-outline-stone-600 {
+  outline-color: #57534e !important;
+}
+
+.pdf-text-stone-700 {
+  color: #44403c !important;
+}
+.pdf-bg-stone-700 {
+  background-color: #44403c !important;
+}
+.pdf-border-stone-700 {
+  border-color: #44403c !important;
+}
+.pdf-outline-stone-700 {
+  outline-color: #44403c !important;
+}
+
+.pdf-text-stone-800 {
+  color: #292524 !important;
+}
+.pdf-bg-stone-800 {
+  background-color: #292524 !important;
+}
+.pdf-border-stone-800 {
+  border-color: #292524 !important;
+}
+.pdf-outline-stone-800 {
+  outline-color: #292524 !important;
+}
+
+.pdf-text-stone-900 {
+  color: #1c1917 !important;
+}
+.pdf-bg-stone-900 {
+  background-color: #1c1917 !important;
+}
+.pdf-border-stone-900 {
+  border-color: #1c1917 !important;
+}
+.pdf-outline-stone-900 {
+  outline-color: #1c1917 !important;
+}
+
+.pdf-text-red-50 {
+  color: #fef2f2 !important;
+}
+.pdf-bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+.pdf-outline-red-50 {
+  outline-color: #fef2f2 !important;
+}
+
+.pdf-text-red-100 {
+  color: #fee2e2 !important;
+}
+.pdf-bg-red-100 {
+  background-color: #fee2e2 !important;
+}
+.pdf-outline-red-100 {
+  outline-color: #fee2e2 !important;
+}
+
+.pdf-text-red-200 {
+  color: #fecaca !important;
+}
+.pdf-bg-red-200 {
+  background-color: #fecaca !important;
+}
+.pdf-outline-red-200 {
+  outline-color: #fecaca !important;
+}
+
+.pdf-text-red-300 {
+  color: #fca5a5 !important;
+}
+.pdf-bg-red-300 {
+  background-color: #fca5a5 !important;
+}
+.pdf-outline-red-300 {
+  outline-color: #fca5a5 !important;
+}
+
+.pdf-text-red-400 {
+  color: #f87171 !important;
+}
+.pdf-bg-red-400 {
+  background-color: #f87171 !important;
+}
+.pdf-outline-red-400 {
+  outline-color: #f87171 !important;
+}
+
+.pdf-text-red-500 {
+  color: #ef4444 !important;
+}
+.pdf-bg-red-500 {
+  background-color: #ef4444 !important;
+}
+.pdf-outline-red-500 {
+  outline-color: #ef4444 !important;
+}
+
+.pdf-text-red-600 {
+  color: #dc2626 !important;
+}
+.pdf-bg-red-600 {
+  background-color: #dc2626 !important;
+}
+.pdf-outline-red-600 {
+  outline-color: #dc2626 !important;
+}
+
+.pdf-text-red-700 {
+  color: #b91c1c !important;
+}
+.pdf-bg-red-700 {
+  background-color: #b91c1c !important;
+}
+.pdf-outline-red-700 {
+  outline-color: #b91c1c !important;
+}
+
+.pdf-text-red-800 {
+  color: #991b1b !important;
+}
+.pdf-bg-red-800 {
+  background-color: #991b1b !important;
+}
+.pdf-outline-red-800 {
+  outline-color: #991b1b !important;
+}
+
+.pdf-text-red-900 {
+  color: #7f1d1d !important;
+}
+.pdf-bg-red-900 {
+  background-color: #7f1d1d !important;
+}
+.pdf-outline-red-900 {
+  outline-color: #7f1d1d !important;
+}
+
+.pdf-text-orange-50 {
+  color: #fff7ed !important;
+}
+.pdf-bg-orange-50 {
+  background-color: #fff7ed !important;
+}
+.pdf-border-orange-50 {
+  border-color: #fff7ed !important;
+}
+.pdf-outline-orange-50 {
+  outline-color: #fff7ed !important;
+}
+
+.pdf-text-orange-100 {
+  color: #ffedd5 !important;
+}
+.pdf-bg-orange-100 {
+  background-color: #ffedd5 !important;
+}
+.pdf-border-orange-100 {
+  border-color: #ffedd5 !important;
+}
+.pdf-outline-orange-100 {
+  outline-color: #ffedd5 !important;
+}
+
+.pdf-text-orange-200 {
+  color: #fed7aa !important;
+}
+.pdf-bg-orange-200 {
+  background-color: #fed7aa !important;
+}
+.pdf-border-orange-200 {
+  border-color: #fed7aa !important;
+}
+.pdf-outline-orange-200 {
+  outline-color: #fed7aa !important;
+}
+
+.pdf-text-orange-300 {
+  color: #fdba74 !important;
+}
+.pdf-bg-orange-300 {
+  background-color: #fdba74 !important;
+}
+.pdf-border-orange-300 {
+  border-color: #fdba74 !important;
+}
+.pdf-outline-orange-300 {
+  outline-color: #fdba74 !important;
+}
+
+.pdf-text-orange-400 {
+  color: #fb923c !important;
+}
+.pdf-bg-orange-400 {
+  background-color: #fb923c !important;
+}
+.pdf-border-orange-400 {
+  border-color: #fb923c !important;
+}
+.pdf-outline-orange-400 {
+  outline-color: #fb923c !important;
+}
+
+.pdf-text-orange-500 {
+  color: #f97316 !important;
+}
+.pdf-bg-orange-500 {
+  background-color: #f97316 !important;
+}
+.pdf-border-orange-500 {
+  border-color: #f97316 !important;
+}
+.pdf-outline-orange-500 {
+  outline-color: #f97316 !important;
+}
+
+.pdf-text-orange-600 {
+  color: #ea580c !important;
+}
+.pdf-bg-orange-600 {
+  background-color: #ea580c !important;
+}
+.pdf-border-orange-600 {
+  border-color: #ea580c !important;
+}
+.pdf-outline-orange-600 {
+  outline-color: #ea580c !important;
+}
+
+.pdf-text-orange-700 {
+  color: #c2410c !important;
+}
+.pdf-bg-orange-700 {
+  background-color: #c2410c !important;
+}
+.pdf-border-orange-700 {
+  border-color: #c2410c !important;
+}
+.pdf-outline-orange-700 {
+  outline-color: #c2410c !important;
+}
+
+.pdf-text-orange-800 {
+  color: #9a3412 !important;
+}
+.pdf-bg-orange-800 {
+  background-color: #9a3412 !important;
+}
+.pdf-border-orange-800 {
+  border-color: #9a3412 !important;
+}
+.pdf-outline-orange-800 {
+  outline-color: #9a3412 !important;
+}
+
+.pdf-text-orange-900 {
+  color: #7c2d12 !important;
+}
+.pdf-bg-orange-900 {
+  background-color: #7c2d12 !important;
+}
+.pdf-border-orange-900 {
+  border-color: #7c2d12 !important;
+}
+.pdf-outline-orange-900 {
+  outline-color: #7c2d12 !important;
+}
+
+.pdf-text-amber-50 {
+  color: #fffbeb !important;
+}
+.pdf-bg-amber-50 {
+  background-color: #fffbeb !important;
+}
+.pdf-border-amber-50 {
+  border-color: #fffbeb !important;
+}
+.pdf-outline-amber-50 {
+  outline-color: #fffbeb !important;
+}
+
+.pdf-text-amber-100 {
+  color: #fef3c7 !important;
+}
+.pdf-bg-amber-100 {
+  background-color: #fef3c7 !important;
+}
+.pdf-border-amber-100 {
+  border-color: #fef3c7 !important;
+}
+.pdf-outline-amber-100 {
+  outline-color: #fef3c7 !important;
+}
+
+.pdf-text-amber-200 {
+  color: #fde68a !important;
+}
+.pdf-bg-amber-200 {
+  background-color: #fde68a !important;
+}
+.pdf-border-amber-200 {
+  border-color: #fde68a !important;
+}
+.pdf-outline-amber-200 {
+  outline-color: #fde68a !important;
+}
+
+.pdf-text-amber-300 {
+  color: #fcd34d !important;
+}
+.pdf-bg-amber-300 {
+  background-color: #fcd34d !important;
+}
+.pdf-border-amber-300 {
+  border-color: #fcd34d !important;
+}
+.pdf-outline-amber-300 {
+  outline-color: #fcd34d !important;
+}
+
+.pdf-text-amber-400 {
+  color: #fbbf24 !important;
+}
+.pdf-bg-amber-400 {
+  background-color: #fbbf24 !important;
+}
+.pdf-border-amber-400 {
+  border-color: #fbbf24 !important;
+}
+.pdf-outline-amber-400 {
+  outline-color: #fbbf24 !important;
+}
+
+.pdf-text-amber-500 {
+  color: #f59e0b !important;
+}
+.pdf-bg-amber-500 {
+  background-color: #f59e0b !important;
+}
+.pdf-border-amber-500 {
+  border-color: #f59e0b !important;
+}
+.pdf-outline-amber-500 {
+  outline-color: #f59e0b !important;
+}
+
+.pdf-text-amber-600 {
+  color: #d97706 !important;
+}
+.pdf-bg-amber-600 {
+  background-color: #d97706 !important;
+}
+.pdf-border-amber-600 {
+  border-color: #d97706 !important;
+}
+.pdf-outline-amber-600 {
+  outline-color: #d97706 !important;
+}
+
+.pdf-text-amber-700 {
+  color: #b45309 !important;
+}
+.pdf-bg-amber-700 {
+  background-color: #b45309 !important;
+}
+.pdf-border-amber-700 {
+  border-color: #b45309 !important;
+}
+.pdf-outline-amber-700 {
+  outline-color: #b45309 !important;
+}
+
+.pdf-text-amber-800 {
+  color: #92400e !important;
+}
+.pdf-bg-amber-800 {
+  background-color: #92400e !important;
+}
+.pdf-border-amber-800 {
+  border-color: #92400e !important;
+}
+.pdf-outline-amber-800 {
+  outline-color: #92400e !important;
+}
+
+.pdf-text-amber-900 {
+  color: #78350f !important;
+}
+.pdf-bg-amber-900 {
+  background-color: #78350f !important;
+}
+.pdf-border-amber-900 {
+  border-color: #78350f !important;
+}
+.pdf-outline-amber-900 {
+  outline-color: #78350f !important;
+}
+
+.pdf-text-yellow-50 {
+  color: #fefce8 !important;
+}
+.pdf-bg-yellow-50 {
+  background-color: #fefce8 !important;
+}
+.pdf-border-yellow-50 {
+  border-color: #fefce8 !important;
+}
+.pdf-outline-yellow-50 {
+  outline-color: #fefce8 !important;
+}
+
+.pdf-text-yellow-100 {
+  color: #fef9c3 !important;
+}
+.pdf-bg-yellow-100 {
+  background-color: #fef9c3 !important;
+}
+.pdf-border-yellow-100 {
+  border-color: #fef9c3 !important;
+}
+.pdf-outline-yellow-100 {
+  outline-color: #fef9c3 !important;
+}
+
+.pdf-text-yellow-200 {
+  color: #fef08a !important;
+}
+.pdf-bg-yellow-200 {
+  background-color: #fef08a !important;
+}
+.pdf-border-yellow-200 {
+  border-color: #fef08a !important;
+}
+.pdf-outline-yellow-200 {
+  outline-color: #fef08a !important;
+}
+
+.pdf-text-yellow-300 {
+  color: #fde047 !important;
+}
+.pdf-bg-yellow-300 {
+  background-color: #fde047 !important;
+}
+.pdf-border-yellow-300 {
+  border-color: #fde047 !important;
+}
+.pdf-outline-yellow-300 {
+  outline-color: #fde047 !important;
+}
+
+.pdf-text-yellow-400 {
+  color: #facc15 !important;
+}
+.pdf-bg-yellow-400 {
+  background-color: #facc15 !important;
+}
+.pdf-border-yellow-400 {
+  border-color: #facc15 !important;
+}
+.pdf-outline-yellow-400 {
+  outline-color: #facc15 !important;
+}
+
+.pdf-text-yellow-500 {
+  color: #eab308 !important;
+}
+.pdf-bg-yellow-500 {
+  background-color: #eab308 !important;
+}
+.pdf-border-yellow-500 {
+  border-color: #eab308 !important;
+}
+.pdf-outline-yellow-500 {
+  outline-color: #eab308 !important;
+}
+
+.pdf-text-yellow-600 {
+  color: #ca8a04 !important;
+}
+.pdf-bg-yellow-600 {
+  background-color: #ca8a04 !important;
+}
+.pdf-border-yellow-600 {
+  border-color: #ca8a04 !important;
+}
+.pdf-outline-yellow-600 {
+  outline-color: #ca8a04 !important;
+}
+
+.pdf-text-yellow-700 {
+  color: #a16207 !important;
+}
+.pdf-bg-yellow-700 {
+  background-color: #a16207 !important;
+}
+.pdf-border-yellow-700 {
+  border-color: #a16207 !important;
+}
+.pdf-outline-yellow-700 {
+  outline-color: #a16207 !important;
+}
+
+.pdf-text-yellow-800 {
+  color: #854d0e !important;
+}
+.pdf-bg-yellow-800 {
+  background-color: #854d0e !important;
+}
+.pdf-border-yellow-800 {
+  border-color: #854d0e !important;
+}
+.pdf-outline-yellow-800 {
+  outline-color: #854d0e !important;
+}
+
+.pdf-text-yellow-900 {
+  color: #713f12 !important;
+}
+.pdf-bg-yellow-900 {
+  background-color: #713f12 !important;
+}
+.pdf-border-yellow-900 {
+  border-color: #713f12 !important;
+}
+.pdf-outline-yellow-900 {
+  outline-color: #713f12 !important;
+}
+
+.pdf-text-lime-50 {
+  color: #f7fee7 !important;
+}
+.pdf-bg-lime-50 {
+  background-color: #f7fee7 !important;
+}
+.pdf-border-lime-50 {
+  border-color: #f7fee7 !important;
+}
+.pdf-outline-lime-50 {
+  outline-color: #f7fee7 !important;
+}
+
+.pdf-text-lime-100 {
+  color: #ecfccb !important;
+}
+.pdf-bg-lime-100 {
+  background-color: #ecfccb !important;
+}
+.pdf-border-lime-100 {
+  border-color: #ecfccb !important;
+}
+.pdf-outline-lime-100 {
+  outline-color: #ecfccb !important;
+}
+
+.pdf-text-lime-200 {
+  color: #d9f99d !important;
+}
+.pdf-bg-lime-200 {
+  background-color: #d9f99d !important;
+}
+.pdf-border-lime-200 {
+  border-color: #d9f99d !important;
+}
+.pdf-outline-lime-200 {
+  outline-color: #d9f99d !important;
+}
+
+.pdf-text-lime-300 {
+  color: #bef264 !important;
+}
+.pdf-bg-lime-300 {
+  background-color: #bef264 !important;
+}
+.pdf-border-lime-300 {
+  border-color: #bef264 !important;
+}
+.pdf-outline-lime-300 {
+  outline-color: #bef264 !important;
+}
+
+.pdf-text-lime-400 {
+  color: #a3e635 !important;
+}
+.pdf-bg-lime-400 {
+  background-color: #a3e635 !important;
+}
+.pdf-border-lime-400 {
+  border-color: #a3e635 !important;
+}
+.pdf-outline-lime-400 {
+  outline-color: #a3e635 !important;
+}
+
+.pdf-text-lime-500 {
+  color: #84cc16 !important;
+}
+.pdf-bg-lime-500 {
+  background-color: #84cc16 !important;
+}
+.pdf-border-lime-500 {
+  border-color: #84cc16 !important;
+}
+.pdf-outline-lime-500 {
+  outline-color: #84cc16 !important;
+}
+
+.pdf-text-lime-600 {
+  color: #65a30d !important;
+}
+.pdf-bg-lime-600 {
+  background-color: #65a30d !important;
+}
+.pdf-border-lime-600 {
+  border-color: #65a30d !important;
+}
+.pdf-outline-lime-600 {
+  outline-color: #65a30d !important;
+}
+
+.pdf-text-lime-700 {
+  color: #4d7c0f !important;
+}
+.pdf-bg-lime-700 {
+  background-color: #4d7c0f !important;
+}
+.pdf-border-lime-700 {
+  border-color: #4d7c0f !important;
+}
+.pdf-outline-lime-700 {
+  outline-color: #4d7c0f !important;
+}
+
+.pdf-text-lime-800 {
+  color: #3f6212 !important;
+}
+.pdf-bg-lime-800 {
+  background-color: #3f6212 !important;
+}
+.pdf-border-lime-800 {
+  border-color: #3f6212 !important;
+}
+.pdf-outline-lime-800 {
+  outline-color: #3f6212 !important;
+}
+
+.pdf-text-lime-900 {
+  color: #365314 !important;
+}
+.pdf-bg-lime-900 {
+  background-color: #365314 !important;
+}
+.pdf-border-lime-900 {
+  border-color: #365314 !important;
+}
+.pdf-outline-lime-900 {
+  outline-color: #365314 !important;
+}
+
+.pdf-text-green-50 {
+  color: #f0fdf4 !important;
+}
+.pdf-bg-green-50 {
+  background-color: #f0fdf4 !important;
+}
+.pdf-border-green-50 {
+  border-color: #f0fdf4 !important;
+}
+.pdf-outline-green-50 {
+  outline-color: #f0fdf4 !important;
+}
+
+.pdf-text-green-100 {
+  color: #dcfce7 !important;
+}
+.pdf-bg-green-100 {
+  background-color: #dcfce7 !important;
+}
+.pdf-border-green-100 {
+  border-color: #dcfce7 !important;
+}
+.pdf-outline-green-100 {
+  outline-color: #dcfce7 !important;
+}
+
+.pdf-text-green-200 {
+  color: #bbf7d0 !important;
+}
+.pdf-bg-green-200 {
+  background-color: #bbf7d0 !important;
+}
+.pdf-border-green-200 {
+  border-color: #bbf7d0 !important;
+}
+.pdf-outline-green-200 {
+  outline-color: #bbf7d0 !important;
+}
+
+.pdf-text-green-300 {
+  color: #86efac !important;
+}
+.pdf-bg-green-300 {
+  background-color: #86efac !important;
+}
+.pdf-border-green-300 {
+  border-color: #86efac !important;
+}
+.pdf-outline-green-300 {
+  outline-color: #86efac !important;
+}
+
+.pdf-text-green-400 {
+  color: #4ade80 !important;
+}
+.pdf-bg-green-400 {
+  background-color: #4ade80 !important;
+}
+.pdf-border-green-400 {
+  border-color: #4ade80 !important;
+}
+.pdf-outline-green-400 {
+  outline-color: #4ade80 !important;
+}
+
+.pdf-text-green-500 {
+  color: #22c55e !important;
+}
+.pdf-bg-green-500 {
+  background-color: #22c55e !important;
+}
+.pdf-border-green-500 {
+  border-color: #22c55e !important;
+}
+.pdf-outline-green-500 {
+  outline-color: #22c55e !important;
+}
+
+.pdf-text-green-600 {
+  color: #16a34a !important;
+}
+.pdf-bg-green-600 {
+  background-color: #16a34a !important;
+}
+.pdf-border-green-600 {
+  border-color: #16a34a !important;
+}
+.pdf-outline-green-600 {
+  outline-color: #16a34a !important;
+}
+
+.pdf-text-green-700 {
+  color: #15803d !important;
+}
+.pdf-bg-green-700 {
+  background-color: #15803d !important;
+}
+.pdf-border-green-700 {
+  border-color: #15803d !important;
+}
+.pdf-outline-green-700 {
+  outline-color: #15803d !important;
+}
+
+.pdf-text-green-800 {
+  color: #166534 !important;
+}
+.pdf-bg-green-800 {
+  background-color: #166534 !important;
+}
+.pdf-border-green-800 {
+  border-color: #166534 !important;
+}
+.pdf-outline-green-800 {
+  outline-color: #166534 !important;
+}
+
+.pdf-text-green-900 {
+  color: #14532d !important;
+}
+.pdf-bg-green-900 {
+  background-color: #14532d !important;
+}
+.pdf-border-green-900 {
+  border-color: #14532d !important;
+}
+.pdf-outline-green-900 {
+  outline-color: #14532d !important;
+}
+
+.pdf-text-emerald-50 {
+  color: #ecfdf5 !important;
+}
+.pdf-bg-emerald-50 {
+  background-color: #ecfdf5 !important;
+}
+.pdf-border-emerald-50 {
+  border-color: #ecfdf5 !important;
+}
+.pdf-outline-emerald-50 {
+  outline-color: #ecfdf5 !important;
+}
+
+.pdf-text-emerald-100 {
+  color: #d1fae5 !important;
+}
+.pdf-bg-emerald-100 {
+  background-color: #d1fae5 !important;
+}
+.pdf-border-emerald-100 {
+  border-color: #d1fae5 !important;
+}
+.pdf-outline-emerald-100 {
+  outline-color: #d1fae5 !important;
+}
+
+.pdf-text-emerald-200 {
+  color: #a7f3d0 !important;
+}
+.pdf-bg-emerald-200 {
+  background-color: #a7f3d0 !important;
+}
+.pdf-border-emerald-200 {
+  border-color: #a7f3d0 !important;
+}
+.pdf-outline-emerald-200 {
+  outline-color: #a7f3d0 !important;
+}
+
+.pdf-text-emerald-300 {
+  color: #6ee7b7 !important;
+}
+.pdf-bg-emerald-300 {
+  background-color: #6ee7b7 !important;
+}
+.pdf-border-emerald-300 {
+  border-color: #6ee7b7 !important;
+}
+.pdf-outline-emerald-300 {
+  outline-color: #6ee7b7 !important;
+}
+
+.pdf-text-emerald-400 {
+  color: #34d399 !important;
+}
+.pdf-bg-emerald-400 {
+  background-color: #34d399 !important;
+}
+.pdf-border-emerald-400 {
+  border-color: #34d399 !important;
+}
+.pdf-outline-emerald-400 {
+  outline-color: #34d399 !important;
+}
+
+.pdf-text-emerald-500 {
+  color: #10b981 !important;
+}
+.pdf-bg-emerald-500 {
+  background-color: #10b981 !important;
+}
+.pdf-border-emerald-500 {
+  border-color: #10b981 !important;
+}
+.pdf-outline-emerald-500 {
+  outline-color: #10b981 !important;
+}
+
+.pdf-text-emerald-600 {
+  color: #059669 !important;
+}
+.pdf-bg-emerald-600 {
+  background-color: #059669 !important;
+}
+.pdf-border-emerald-600 {
+  border-color: #059669 !important;
+}
+.pdf-outline-emerald-600 {
+  outline-color: #059669 !important;
+}
+
+.pdf-text-emerald-700 {
+  color: #047857 !important;
+}
+.pdf-bg-emerald-700 {
+  background-color: #047857 !important;
+}
+.pdf-border-emerald-700 {
+  border-color: #047857 !important;
+}
+.pdf-outline-emerald-700 {
+  outline-color: #047857 !important;
+}
+
+.pdf-text-emerald-800 {
+  color: #065f46 !important;
+}
+.pdf-bg-emerald-800 {
+  background-color: #065f46 !important;
+}
+.pdf-border-emerald-800 {
+  border-color: #065f46 !important;
+}
+.pdf-outline-emerald-800 {
+  outline-color: #065f46 !important;
+}
+
+.pdf-text-emerald-900 {
+  color: #064e3b !important;
+}
+.pdf-bg-emerald-900 {
+  background-color: #064e3b !important;
+}
+.pdf-border-emerald-900 {
+  border-color: #064e3b !important;
+}
+.pdf-outline-emerald-900 {
+  outline-color: #064e3b !important;
+}
+
+.pdf-text-teal-50 {
+  color: #f0fdfa !important;
+}
+.pdf-bg-teal-50 {
+  background-color: #f0fdfa !important;
+}
+.pdf-border-teal-50 {
+  border-color: #f0fdfa !important;
+}
+.pdf-outline-teal-50 {
+  outline-color: #f0fdfa !important;
+}
+
+.pdf-text-teal-100 {
+  color: #ccfbf1 !important;
+}
+.pdf-bg-teal-100 {
+  background-color: #ccfbf1 !important;
+}
+.pdf-border-teal-100 {
+  border-color: #ccfbf1 !important;
+}
+.pdf-outline-teal-100 {
+  outline-color: #ccfbf1 !important;
+}
+
+.pdf-text-teal-200 {
+  color: #99f6e4 !important;
+}
+.pdf-bg-teal-200 {
+  background-color: #99f6e4 !important;
+}
+.pdf-border-teal-200 {
+  border-color: #99f6e4 !important;
+}
+.pdf-outline-teal-200 {
+  outline-color: #99f6e4 !important;
+}
+
+.pdf-text-teal-300 {
+  color: #5eead4 !important;
+}
+.pdf-bg-teal-300 {
+  background-color: #5eead4 !important;
+}
+.pdf-border-teal-300 {
+  border-color: #5eead4 !important;
+}
+.pdf-outline-teal-300 {
+  outline-color: #5eead4 !important;
+}
+
+.pdf-text-teal-400 {
+  color: #2dd4bf !important;
+}
+.pdf-bg-teal-400 {
+  background-color: #2dd4bf !important;
+}
+.pdf-border-teal-400 {
+  border-color: #2dd4bf !important;
+}
+.pdf-outline-teal-400 {
+  outline-color: #2dd4bf !important;
+}
+
+.pdf-text-teal-500 {
+  color: #14b8a6 !important;
+}
+.pdf-bg-teal-500 {
+  background-color: #14b8a6 !important;
+}
+.pdf-border-teal-500 {
+  border-color: #14b8a6 !important;
+}
+.pdf-outline-teal-500 {
+  outline-color: #14b8a6 !important;
+}
+
+.pdf-text-teal-600 {
+  color: #0d9488 !important;
+}
+.pdf-bg-teal-600 {
+  background-color: #0d9488 !important;
+}
+.pdf-border-teal-600 {
+  border-color: #0d9488 !important;
+}
+.pdf-outline-teal-600 {
+  outline-color: #0d9488 !important;
+}
+
+.pdf-text-teal-700 {
+  color: #0f766e !important;
+}
+.pdf-bg-teal-700 {
+  background-color: #0f766e !important;
+}
+.pdf-border-teal-700 {
+  border-color: #0f766e !important;
+}
+.pdf-outline-teal-700 {
+  outline-color: #0f766e !important;
+}
+
+.pdf-text-teal-800 {
+  color: #115e59 !important;
+}
+.pdf-bg-teal-800 {
+  background-color: #115e59 !important;
+}
+.pdf-border-teal-800 {
+  border-color: #115e59 !important;
+}
+.pdf-outline-teal-800 {
+  outline-color: #115e59 !important;
+}
+
+.pdf-text-teal-900 {
+  color: #134e4a !important;
+}
+.pdf-bg-teal-900 {
+  background-color: #134e4a !important;
+}
+.pdf-border-teal-900 {
+  border-color: #134e4a !important;
+}
+.pdf-outline-teal-900 {
+  outline-color: #134e4a !important;
+}
+
+.pdf-text-cyan-50 {
+  color: #ecfeff !important;
+}
+.pdf-bg-cyan-50 {
+  background-color: #ecfeff !important;
+}
+.pdf-border-cyan-50 {
+  border-color: #ecfeff !important;
+}
+.pdf-outline-cyan-50 {
+  outline-color: #ecfeff !important;
+}
+
+.pdf-text-cyan-100 {
+  color: #cffafe !important;
+}
+.pdf-bg-cyan-100 {
+  background-color: #cffafe !important;
+}
+.pdf-border-cyan-100 {
+  border-color: #cffafe !important;
+}
+.pdf-outline-cyan-100 {
+  outline-color: #cffafe !important;
+}
+
+.pdf-text-cyan-200 {
+  color: #a5f3fc !important;
+}
+.pdf-bg-cyan-200 {
+  background-color: #a5f3fc !important;
+}
+.pdf-border-cyan-200 {
+  border-color: #a5f3fc !important;
+}
+.pdf-outline-cyan-200 {
+  outline-color: #a5f3fc !important;
+}
+
+.pdf-text-cyan-300 {
+  color: #67e8f9 !important;
+}
+.pdf-bg-cyan-300 {
+  background-color: #67e8f9 !important;
+}
+.pdf-border-cyan-300 {
+  border-color: #67e8f9 !important;
+}
+.pdf-outline-cyan-300 {
+  outline-color: #67e8f9 !important;
+}
+
+.pdf-text-cyan-400 {
+  color: #22d3ee !important;
+}
+.pdf-bg-cyan-400 {
+  background-color: #22d3ee !important;
+}
+.pdf-border-cyan-400 {
+  border-color: #22d3ee !important;
+}
+.pdf-outline-cyan-400 {
+  outline-color: #22d3ee !important;
+}
+
+.pdf-text-cyan-500 {
+  color: #06b6d4 !important;
+}
+.pdf-bg-cyan-500 {
+  background-color: #06b6d4 !important;
+}
+.pdf-border-cyan-500 {
+  border-color: #06b6d4 !important;
+}
+.pdf-outline-cyan-500 {
+  outline-color: #06b6d4 !important;
+}
+
+.pdf-text-cyan-600 {
+  color: #0891b2 !important;
+}
+.pdf-bg-cyan-600 {
+  background-color: #0891b2 !important;
+}
+.pdf-border-cyan-600 {
+  border-color: #0891b2 !important;
+}
+.pdf-outline-cyan-600 {
+  outline-color: #0891b2 !important;
+}
+
+.pdf-text-cyan-700 {
+  color: #0e7490 !important;
+}
+.pdf-bg-cyan-700 {
+  background-color: #0e7490 !important;
+}
+.pdf-border-cyan-700 {
+  border-color: #0e7490 !important;
+}
+.pdf-outline-cyan-700 {
+  outline-color: #0e7490 !important;
+}
+
+.pdf-text-cyan-800 {
+  color: #155e75 !important;
+}
+.pdf-bg-cyan-800 {
+  background-color: #155e75 !important;
+}
+.pdf-border-cyan-800 {
+  border-color: #155e75 !important;
+}
+.pdf-outline-cyan-800 {
+  outline-color: #155e75 !important;
+}
+
+.pdf-text-cyan-900 {
+  color: #164e63 !important;
+}
+.pdf-bg-cyan-900 {
+  background-color: #164e63 !important;
+}
+.pdf-border-cyan-900 {
+  border-color: #164e63 !important;
+}
+.pdf-outline-cyan-900 {
+  outline-color: #164e63 !important;
+}
+
+.pdf-text-sky-50 {
+  color: #f0f9ff !important;
+}
+.pdf-bg-sky-50 {
+  background-color: #f0f9ff !important;
+}
+.pdf-border-sky-50 {
+  border-color: #f0f9ff !important;
+}
+.pdf-outline-sky-50 {
+  outline-color: #f0f9ff !important;
+}
+
+.pdf-text-sky-100 {
+  color: #e0f2fe !important;
+}
+.pdf-bg-sky-100 {
+  background-color: #e0f2fe !important;
+}
+.pdf-border-sky-100 {
+  border-color: #e0f2fe !important;
+}
+.pdf-outline-sky-100 {
+  outline-color: #e0f2fe !important;
+}
+
+.pdf-text-sky-200 {
+  color: #bae6fd !important;
+}
+.pdf-bg-sky-200 {
+  background-color: #bae6fd !important;
+}
+.pdf-border-sky-200 {
+  border-color: #bae6fd !important;
+}
+.pdf-outline-sky-200 {
+  outline-color: #bae6fd !important;
+}
+
+.pdf-text-sky-300 {
+  color: #7dd3fc !important;
+}
+.pdf-bg-sky-300 {
+  background-color: #7dd3fc !important;
+}
+.pdf-border-sky-300 {
+  border-color: #7dd3fc !important;
+}
+.pdf-outline-sky-300 {
+  outline-color: #7dd3fc !important;
+}
+
+.pdf-text-sky-400 {
+  color: #38bdf8 !important;
+}
+.pdf-bg-sky-400 {
+  background-color: #38bdf8 !important;
+}
+.pdf-border-sky-400 {
+  border-color: #38bdf8 !important;
+}
+.pdf-outline-sky-400 {
+  outline-color: #38bdf8 !important;
+}
+
+.pdf-text-sky-500 {
+  color: #0ea5e9 !important;
+}
+.pdf-bg-sky-500 {
+  background-color: #0ea5e9 !important;
+}
+.pdf-border-sky-500 {
+  border-color: #0ea5e9 !important;
+}
+.pdf-outline-sky-500 {
+  outline-color: #0ea5e9 !important;
+}
+
+.pdf-text-sky-600 {
+  color: #0284c7 !important;
+}
+.pdf-bg-sky-600 {
+  background-color: #0284c7 !important;
+}
+.pdf-border-sky-600 {
+  border-color: #0284c7 !important;
+}
+.pdf-outline-sky-600 {
+  outline-color: #0284c7 !important;
+}
+
+.pdf-text-sky-700 {
+  color: #0369a1 !important;
+}
+.pdf-bg-sky-700 {
+  background-color: #0369a1 !important;
+}
+.pdf-border-sky-700 {
+  border-color: #0369a1 !important;
+}
+.pdf-outline-sky-700 {
+  outline-color: #0369a1 !important;
+}
+
+.pdf-text-sky-800 {
+  color: #075985 !important;
+}
+.pdf-bg-sky-800 {
+  background-color: #075985 !important;
+}
+.pdf-border-sky-800 {
+  border-color: #075985 !important;
+}
+.pdf-outline-sky-800 {
+  outline-color: #075985 !important;
+}
+
+.pdf-text-sky-900 {
+  color: #0c4a6e !important;
+}
+.pdf-bg-sky-900 {
+  background-color: #0c4a6e !important;
+}
+.pdf-border-sky-900 {
+  border-color: #0c4a6e !important;
+}
+.pdf-outline-sky-900 {
+  outline-color: #0c4a6e !important;
+}
+
+.pdf-text-blue-50 {
+  color: #eff6ff !important;
+}
+.pdf-bg-blue-50 {
+  background-color: #eff6ff !important;
+}
+.pdf-border-blue-50 {
+  border-color: #eff6ff !important;
+}
+.pdf-outline-blue-50 {
+  outline-color: #eff6ff !important;
+}
+
+.pdf-text-blue-100 {
+  color: #dbeafe !important;
+}
+.pdf-bg-blue-100 {
+  background-color: #dbeafe !important;
+}
+.pdf-border-blue-100 {
+  border-color: #dbeafe !important;
+}
+.pdf-outline-blue-100 {
+  outline-color: #dbeafe !important;
+}
+
+.pdf-text-blue-200 {
+  color: #bfdbfe !important;
+}
+.pdf-bg-blue-200 {
+  background-color: #bfdbfe !important;
+}
+.pdf-border-blue-200 {
+  border-color: #bfdbfe !important;
+}
+.pdf-outline-blue-200 {
+  outline-color: #bfdbfe !important;
+}
+
+.pdf-text-blue-300 {
+  color: #93c5fd !important;
+}
+.pdf-bg-blue-300 {
+  background-color: #93c5fd !important;
+}
+.pdf-border-blue-300 {
+  border-color: #93c5fd !important;
+}
+.pdf-outline-blue-300 {
+  outline-color: #93c5fd !important;
+}
+
+.pdf-text-blue-400 {
+  color: #60a5fa !important;
+}
+.pdf-bg-blue-400 {
+  background-color: #60a5fa !important;
+}
+.pdf-border-blue-400 {
+  border-color: #60a5fa !important;
+}
+.pdf-outline-blue-400 {
+  outline-color: #60a5fa !important;
+}
+
+.pdf-text-blue-500 {
+  color: #3b82f6 !important;
+}
+.pdf-bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+.pdf-border-blue-500 {
+  border-color: #3b82f6 !important;
+}
+.pdf-outline-blue-500 {
+  outline-color: #3b82f6 !important;
+}
+
+.pdf-text-blue-600 {
+  color: #2563eb !important;
+}
+.pdf-bg-blue-600 {
+  background-color: #2563eb !important;
+}
+.pdf-border-blue-600 {
+  border-color: #2563eb !important;
+}
+.pdf-outline-blue-600 {
+  outline-color: #2563eb !important;
+}
+
+.pdf-text-blue-700 {
+  color: #1d4ed8 !important;
+}
+.pdf-bg-blue-700 {
+  background-color: #1d4ed8 !important;
+}
+.pdf-border-blue-700 {
+  border-color: #1d4ed8 !important;
+}
+.pdf-outline-blue-700 {
+  outline-color: #1d4ed8 !important;
+}
+
+.pdf-text-blue-800 {
+  color: #1e40af !important;
+}
+.pdf-bg-blue-800 {
+  background-color: #1e40af !important;
+}
+.pdf-border-blue-800 {
+  border-color: #1e40af !important;
+}
+.pdf-outline-blue-800 {
+  outline-color: #1e40af !important;
+}
+
+.pdf-text-blue-900 {
+  color: #1e3a8a !important;
+}
+.pdf-bg-blue-900 {
+  background-color: #1e3a8a !important;
+}
+.pdf-border-blue-900 {
+  border-color: #1e3a8a !important;
+}
+.pdf-outline-blue-900 {
+  outline-color: #1e3a8a !important;
+}
+
+.pdf-text-indigo-50 {
+  color: #eef2ff !important;
+}
+.pdf-bg-indigo-50 {
+  background-color: #eef2ff !important;
+}
+.pdf-border-indigo-50 {
+  border-color: #eef2ff !important;
+}
+.pdf-outline-indigo-50 {
+  outline-color: #eef2ff !important;
+}
+
+.pdf-text-indigo-100 {
+  color: #e0e7ff !important;
+}
+.pdf-bg-indigo-100 {
+  background-color: #e0e7ff !important;
+}
+.pdf-border-indigo-100 {
+  border-color: #e0e7ff !important;
+}
+.pdf-outline-indigo-100 {
+  outline-color: #e0e7ff !important;
+}
+
+.pdf-text-indigo-200 {
+  color: #c7d2fe !important;
+}
+.pdf-bg-indigo-200 {
+  background-color: #c7d2fe !important;
+}
+.pdf-border-indigo-200 {
+  border-color: #c7d2fe !important;
+}
+.pdf-outline-indigo-200 {
+  outline-color: #c7d2fe !important;
+}
+
+.pdf-text-indigo-300 {
+  color: #a5b4fc !important;
+}
+.pdf-bg-indigo-300 {
+  background-color: #a5b4fc !important;
+}
+.pdf-border-indigo-300 {
+  border-color: #a5b4fc !important;
+}
+.pdf-outline-indigo-300 {
+  outline-color: #a5b4fc !important;
+}
+
+.pdf-text-indigo-400 {
+  color: #818cf8 !important;
+}
+.pdf-bg-indigo-400 {
+  background-color: #818cf8 !important;
+}
+.pdf-border-indigo-400 {
+  border-color: #818cf8 !important;
+}
+.pdf-outline-indigo-400 {
+  outline-color: #818cf8 !important;
+}
+
+.pdf-text-indigo-500 {
+  color: #6366f1 !important;
+}
+.pdf-bg-indigo-500 {
+  background-color: #6366f1 !important;
+}
+.pdf-border-indigo-500 {
+  border-color: #6366f1 !important;
+}
+.pdf-outline-indigo-500 {
+  outline-color: #6366f1 !important;
+}
+
+.pdf-text-indigo-600 {
+  color: #4f46e5 !important;
+}
+.pdf-bg-indigo-600 {
+  background-color: #4f46e5 !important;
+}
+.pdf-border-indigo-600 {
+  border-color: #4f46e5 !important;
+}
+.pdf-outline-indigo-600 {
+  outline-color: #4f46e5 !important;
+}
+
+.pdf-text-indigo-700 {
+  color: #4338ca !important;
+}
+.pdf-bg-indigo-700 {
+  background-color: #4338ca !important;
+}
+.pdf-border-indigo-700 {
+  border-color: #4338ca !important;
+}
+.pdf-outline-indigo-700 {
+  outline-color: #4338ca !important;
+}
+
+.pdf-text-indigo-800 {
+  color: #3730a3 !important;
+}
+.pdf-bg-indigo-800 {
+  background-color: #3730a3 !important;
+}
+.pdf-border-indigo-800 {
+  border-color: #3730a3 !important;
+}
+.pdf-outline-indigo-800 {
+  outline-color: #3730a3 !important;
+}
+
+.pdf-text-indigo-900 {
+  color: #312e81 !important;
+}
+.pdf-bg-indigo-900 {
+  background-color: #312e81 !important;
+}
+.pdf-border-indigo-900 {
+  border-color: #312e81 !important;
+}
+.pdf-outline-indigo-900 {
+  outline-color: #312e81 !important;
+}
+
+.pdf-text-violet-50 {
+  color: #f5f3ff !important;
+}
+.pdf-bg-violet-50 {
+  background-color: #f5f3ff !important;
+}
+.pdf-border-violet-50 {
+  border-color: #f5f3ff !important;
+}
+.pdf-outline-violet-50 {
+  outline-color: #f5f3ff !important;
+}
+
+.pdf-text-violet-100 {
+  color: #ede9fe !important;
+}
+.pdf-bg-violet-100 {
+  background-color: #ede9fe !important;
+}
+.pdf-border-violet-100 {
+  border-color: #ede9fe !important;
+}
+.pdf-outline-violet-100 {
+  outline-color: #ede9fe !important;
+}
+
+.pdf-text-violet-200 {
+  color: #ddd6fe !important;
+}
+.pdf-bg-violet-200 {
+  background-color: #ddd6fe !important;
+}
+.pdf-border-violet-200 {
+  border-color: #ddd6fe !important;
+}
+.pdf-outline-violet-200 {
+  outline-color: #ddd6fe !important;
+}
+
+.pdf-text-violet-300 {
+  color: #c4b5fd !important;
+}
+.pdf-bg-violet-300 {
+  background-color: #c4b5fd !important;
+}
+.pdf-border-violet-300 {
+  border-color: #c4b5fd !important;
+}
+.pdf-outline-violet-300 {
+  outline-color: #c4b5fd !important;
+}
+
+.pdf-text-violet-400 {
+  color: #a78bfa !important;
+}
+.pdf-bg-violet-400 {
+  background-color: #a78bfa !important;
+}
+.pdf-border-violet-400 {
+  border-color: #a78bfa !important;
+}
+.pdf-outline-violet-400 {
+  outline-color: #a78bfa !important;
+}
+
+.pdf-text-violet-500 {
+  color: #8b5cf6 !important;
+}
+.pdf-bg-violet-500 {
+  background-color: #8b5cf6 !important;
+}
+.pdf-border-violet-500 {
+  border-color: #8b5cf6 !important;
+}
+.pdf-outline-violet-500 {
+  outline-color: #8b5cf6 !important;
+}
+
+.pdf-text-violet-600 {
+  color: #7c3aed !important;
+}
+.pdf-bg-violet-600 {
+  background-color: #7c3aed !important;
+}
+.pdf-border-violet-600 {
+  border-color: #7c3aed !important;
+}
+.pdf-outline-violet-600 {
+  outline-color: #7c3aed !important;
+}
+
+.pdf-text-violet-700 {
+  color: #6d28d9 !important;
+}
+.pdf-bg-violet-700 {
+  background-color: #6d28d9 !important;
+}
+.pdf-border-violet-700 {
+  border-color: #6d28d9 !important;
+}
+.pdf-outline-violet-700 {
+  outline-color: #6d28d9 !important;
+}
+
+.pdf-text-violet-800 {
+  color: #5b21b6 !important;
+}
+.pdf-bg-violet-800 {
+  background-color: #5b21b6 !important;
+}
+.pdf-border-violet-800 {
+  border-color: #5b21b6 !important;
+}
+.pdf-outline-violet-800 {
+  outline-color: #5b21b6 !important;
+}
+
+.pdf-text-violet-900 {
+  color: #4c1d95 !important;
+}
+.pdf-bg-violet-900 {
+  background-color: #4c1d95 !important;
+}
+.pdf-border-violet-900 {
+  border-color: #4c1d95 !important;
+}
+.pdf-outline-violet-900 {
+  outline-color: #4c1d95 !important;
+}
+
+.pdf-text-purple-50 {
+  color: #faf5ff !important;
+}
+.pdf-bg-purple-50 {
+  background-color: #faf5ff !important;
+}
+.pdf-border-purple-50 {
+  border-color: #faf5ff !important;
+}
+.pdf-outline-purple-50 {
+  outline-color: #faf5ff !important;
+}
+
+.pdf-text-purple-100 {
+  color: #f3e8ff !important;
+}
+.pdf-bg-purple-100 {
+  background-color: #f3e8ff !important;
+}
+.pdf-border-purple-100 {
+  border-color: #f3e8ff !important;
+}
+.pdf-outline-purple-100 {
+  outline-color: #f3e8ff !important;
+}
+
+.pdf-text-purple-200 {
+  color: #e9d5ff !important;
+}
+.pdf-bg-purple-200 {
+  background-color: #e9d5ff !important;
+}
+.pdf-border-purple-200 {
+  border-color: #e9d5ff !important;
+}
+.pdf-outline-purple-200 {
+  outline-color: #e9d5ff !important;
+}
+
+.pdf-text-purple-300 {
+  color: #d8b4fe !important;
+}
+.pdf-bg-purple-300 {
+  background-color: #d8b4fe !important;
+}
+.pdf-border-purple-300 {
+  border-color: #d8b4fe !important;
+}
+.pdf-outline-purple-300 {
+  outline-color: #d8b4fe !important;
+}
+
+.pdf-text-purple-400 {
+  color: #c084fc !important;
+}
+.pdf-bg-purple-400 {
+  background-color: #c084fc !important;
+}
+.pdf-border-purple-400 {
+  border-color: #c084fc !important;
+}
+.pdf-outline-purple-400 {
+  outline-color: #c084fc !important;
+}
+
+.pdf-text-purple-500 {
+  color: #a855f7 !important;
+}
+.pdf-bg-purple-500 {
+  background-color: #a855f7 !important;
+}
+.pdf-border-purple-500 {
+  border-color: #a855f7 !important;
+}
+.pdf-outline-purple-500 {
+  outline-color: #a855f7 !important;
+}
+
+.pdf-text-purple-600 {
+  color: #9333ea !important;
+}
+.pdf-bg-purple-600 {
+  background-color: #9333ea !important;
+}
+.pdf-border-purple-600 {
+  border-color: #9333ea !important;
+}
+.pdf-outline-purple-600 {
+  outline-color: #9333ea !important;
+}
+
+.pdf-text-purple-700 {
+  color: #7e22ce !important;
+}
+.pdf-bg-purple-700 {
+  background-color: #7e22ce !important;
+}
+.pdf-border-purple-700 {
+  border-color: #7e22ce !important;
+}
+.pdf-outline-purple-700 {
+  outline-color: #7e22ce !important;
+}
+
+.pdf-text-purple-800 {
+  color: #6b21a8 !important;
+}
+.pdf-bg-purple-800 {
+  background-color: #6b21a8 !important;
+}
+.pdf-border-purple-800 {
+  border-color: #6b21a8 !important;
+}
+.pdf-outline-purple-800 {
+  outline-color: #6b21a8 !important;
+}
+
+.pdf-text-purple-900 {
+  color: #581c87 !important;
+}
+.pdf-bg-purple-900 {
+  background-color: #581c87 !important;
+}
+.pdf-border-purple-900 {
+  border-color: #581c87 !important;
+}
+.pdf-outline-purple-900 {
+  outline-color: #581c87 !important;
+}
+
+.pdf-text-fuchsia-50 {
+  color: #fdf4ff !important;
+}
+.pdf-bg-fuchsia-50 {
+  background-color: #fdf4ff !important;
+}
+.pdf-border-fuchsia-50 {
+  border-color: #fdf4ff !important;
+}
+.pdf-outline-fuchsia-50 {
+  outline-color: #fdf4ff !important;
+}
+
+.pdf-text-fuchsia-100 {
+  color: #fae8ff !important;
+}
+.pdf-bg-fuchsia-100 {
+  background-color: #fae8ff !important;
+}
+.pdf-border-fuchsia-100 {
+  border-color: #fae8ff !important;
+}
+.pdf-outline-fuchsia-100 {
+  outline-color: #fae8ff !important;
+}
+
+.pdf-text-fuchsia-200 {
+  color: #f5d0fe !important;
+}
+.pdf-bg-fuchsia-200 {
+  background-color: #f5d0fe !important;
+}
+.pdf-border-fuchsia-200 {
+  border-color: #f5d0fe !important;
+}
+.pdf-outline-fuchsia-200 {
+  outline-color: #f5d0fe !important;
+}
+
+.pdf-text-fuchsia-300 {
+  color: #f0abfc !important;
+}
+.pdf-bg-fuchsia-300 {
+  background-color: #f0abfc !important;
+}
+.pdf-border-fuchsia-300 {
+  border-color: #f0abfc !important;
+}
+.pdf-outline-fuchsia-300 {
+  outline-color: #f0abfc !important;
+}
+
+.pdf-text-fuchsia-400 {
+  color: #e879f9 !important;
+}
+.pdf-bg-fuchsia-400 {
+  background-color: #e879f9 !important;
+}
+.pdf-border-fuchsia-400 {
+  border-color: #e879f9 !important;
+}
+.pdf-outline-fuchsia-400 {
+  outline-color: #e879f9 !important;
+}
+
+.pdf-text-fuchsia-500 {
+  color: #d946ef !important;
+}
+.pdf-bg-fuchsia-500 {
+  background-color: #d946ef !important;
+}
+.pdf-border-fuchsia-500 {
+  border-color: #d946ef !important;
+}
+.pdf-outline-fuchsia-500 {
+  outline-color: #d946ef !important;
+}
+
+.pdf-text-fuchsia-600 {
+  color: #c026d3 !important;
+}
+.pdf-bg-fuchsia-600 {
+  background-color: #c026d3 !important;
+}
+.pdf-border-fuchsia-600 {
+  border-color: #c026d3 !important;
+}
+.pdf-outline-fuchsia-600 {
+  outline-color: #c026d3 !important;
+}
+
+.pdf-text-fuchsia-700 {
+  color: #a21caf !important;
+}
+.pdf-bg-fuchsia-700 {
+  background-color: #a21caf !important;
+}
+.pdf-border-fuchsia-700 {
+  border-color: #a21caf !important;
+}
+.pdf-outline-fuchsia-700 {
+  outline-color: #a21caf !important;
+}
+
+.pdf-text-fuchsia-800 {
+  color: #86198f !important;
+}
+.pdf-bg-fuchsia-800 {
+  background-color: #86198f !important;
+}
+.pdf-border-fuchsia-800 {
+  border-color: #86198f !important;
+}
+.pdf-outline-fuchsia-800 {
+  outline-color: #86198f !important;
+}
+
+.pdf-text-fuchsia-900 {
+  color: #701a75 !important;
+}
+.pdf-bg-fuchsia-900 {
+  background-color: #701a75 !important;
+}
+.pdf-border-fuchsia-900 {
+  border-color: #701a75 !important;
+}
+.pdf-outline-fuchsia-900 {
+  outline-color: #701a75 !important;
+}
+
+.pdf-text-pink-50 {
+  color: #fdf2f8 !important;
+}
+.pdf-bg-pink-50 {
+  background-color: #fdf2f8 !important;
+}
+.pdf-border-pink-50 {
+  border-color: #fdf2f8 !important;
+}
+.pdf-outline-pink-50 {
+  outline-color: #fdf2f8 !important;
+}
+
+.pdf-text-pink-100 {
+  color: #fce7f3 !important;
+}
+.pdf-bg-pink-100 {
+  background-color: #fce7f3 !important;
+}
+.pdf-border-pink-100 {
+  border-color: #fce7f3 !important;
+}
+.pdf-outline-pink-100 {
+  outline-color: #fce7f3 !important;
+}
+
+.pdf-text-pink-200 {
+  color: #fbcfe8 !important;
+}
+.pdf-bg-pink-200 {
+  background-color: #fbcfe8 !important;
+}
+.pdf-border-pink-200 {
+  border-color: #fbcfe8 !important;
+}
+.pdf-outline-pink-200 {
+  outline-color: #fbcfe8 !important;
+}
+
+.pdf-text-pink-300 {
+  color: #f9a8d4 !important;
+}
+.pdf-bg-pink-300 {
+  background-color: #f9a8d4 !important;
+}
+.pdf-border-pink-300 {
+  border-color: #f9a8d4 !important;
+}
+.pdf-outline-pink-300 {
+  outline-color: #f9a8d4 !important;
+}
+
+.pdf-text-pink-400 {
+  color: #f472b6 !important;
+}
+.pdf-bg-pink-400 {
+  background-color: #f472b6 !important;
+}
+.pdf-border-pink-400 {
+  border-color: #f472b6 !important;
+}
+.pdf-outline-pink-400 {
+  outline-color: #f472b6 !important;
+}
+
+.pdf-text-pink-500 {
+  color: #ec4899 !important;
+}
+.pdf-bg-pink-500 {
+  background-color: #ec4899 !important;
+}
+.pdf-border-pink-500 {
+  border-color: #ec4899 !important;
+}
+.pdf-outline-pink-500 {
+  outline-color: #ec4899 !important;
+}
+
+.pdf-text-pink-600 {
+  color: #db2777 !important;
+}
+.pdf-bg-pink-600 {
+  background-color: #db2777 !important;
+}
+.pdf-border-pink-600 {
+  border-color: #db2777 !important;
+}
+.pdf-outline-pink-600 {
+  outline-color: #db2777 !important;
+}
+
+.pdf-text-pink-700 {
+  color: #be185d !important;
+}
+.pdf-bg-pink-700 {
+  background-color: #be185d !important;
+}
+.pdf-border-pink-700 {
+  border-color: #be185d !important;
+}
+.pdf-outline-pink-700 {
+  outline-color: #be185d !important;
+}
+
+.pdf-text-pink-800 {
+  color: #9d174d !important;
+}
+.pdf-bg-pink-800 {
+  background-color: #9d174d !important;
+}
+.pdf-border-pink-800 {
+  border-color: #9d174d !important;
+}
+.pdf-outline-pink-800 {
+  outline-color: #9d174d !important;
+}
+
+.pdf-text-pink-900 {
+  color: #831843 !important;
+}
+.pdf-bg-pink-900 {
+  background-color: #831843 !important;
+}
+.pdf-border-pink-900 {
+  border-color: #831843 !important;
+}
+.pdf-outline-pink-900 {
+  outline-color: #831843 !important;
+}
+
+.pdf-text-rose-50 {
+  color: #fdf2f8 !important;
+}
+.pdf-bg-rose-50 {
+  background-color: #fdf2f8 !important;
+}
+.pdf-border-rose-50 {
+  border-color: #fdf2f8 !important;
+}
+.pdf-outline-rose-50 {
+  outline-color: #fdf2f8 !important;
+}
+
+.pdf-text-rose-100 {
+  color: #fce7f3 !important;
+}
+.pdf-bg-rose-100 {
+  background-color: #fce7f3 !important;
+}
+.pdf-border-rose-100 {
+  border-color: #fce7f3 !important;
+}
+.pdf-outline-rose-100 {
+  outline-color: #fce7f3 !important;
+}
+
+.pdf-text-rose-200 {
+  color: #fbcfe8 !important;
+}
+.pdf-bg-rose-200 {
+  background-color: #fbcfe8 !important;
+}
+.pdf-border-rose-200 {
+  border-color: #fbcfe8 !important;
+}
+.pdf-outline-rose-200 {
+  outline-color: #fbcfe8 !important;
+}
+
+.pdf-text-rose-300 {
+  color: #f9a8d4 !important;
+}
+.pdf-bg-rose-300 {
+  background-color: #f9a8d4 !important;
+}
+.pdf-border-rose-300 {
+  border-color: #f9a8d4 !important;
+}
+.pdf-outline-rose-300 {
+  outline-color: #f9a8d4 !important;
+}
+
+.pdf-text-rose-400 {
+  color: #f472b6 !important;
+}
+.pdf-bg-rose-400 {
+  background-color: #f472b6 !important;
+}
+.pdf-border-rose-400 {
+  border-color: #f472b6 !important;
+}
+.pdf-outline-rose-400 {
+  outline-color: #f472b6 !important;
+}
+
+.pdf-text-rose-500 {
+  color: #ec4899 !important;
+}
+.pdf-bg-rose-500 {
+  background-color: #ec4899 !important;
+}
+.pdf-border-rose-500 {
+  border-color: #ec4899 !important;
+}
+.pdf-outline-rose-500 {
+  outline-color: #ec4899 !important;
+}
+
+.pdf-text-rose-600 {
+  color: #db2777 !important;
+}
+.pdf-bg-rose-600 {
+  background-color: #db2777 !important;
+}
+.pdf-border-rose-600 {
+  border-color: #db2777 !important;
+}
+.pdf-outline-rose-600 {
+  outline-color: #db2777 !important;
+}
+
+.pdf-text-rose-700 {
+  color: #be185d !important;
+}
+.pdf-bg-rose-700 {
+  background-color: #be185d !important;
+}
+.pdf-border-rose-700 {
+  border-color: #be185d !important;
+}
+.pdf-outline-rose-700 {
+  outline-color: #be185d !important;
+}
+
+.pdf-text-rose-800 {
+  color: #9d174d !important;
+}
+.pdf-bg-rose-800 {
+  background-color: #9d174d !important;
+}
+.pdf-border-rose-800 {
+  border-color: #9d174d !important;
+}
+.pdf-outline-rose-800 {
+  outline-color: #9d174d !important;
+}
+
+.pdf-text-rose-900 {
+  color: #831843 !important;
+}
+.pdf-bg-rose-900 {
+  background-color: #831843 !important;
+}
+.pdf-border-rose-900 {
+  border-color: #831843 !important;
+}
+.pdf-outline-rose-900 {
+  outline-color: #831843 !important;
+}
+
+.pdf-rounded-none {
+  border-radius: 0 !important;
+}
+
+.pdf-rounded-sm {
+  border-radius: 0.125rem !important;
+}
+
+.pdf-rounded {
+  border-radius: 0.25rem !important;
+}
+
+.pdf-rounded-md {
+  border-radius: 0.375rem !important;
+}
+
+.pdf-rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.pdf-rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.pdf-rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.pdf-rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.pdf-rounded-full {
+  border-radius: 9999px !important;
+}
+
+.pdf-rounded-t-none {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.pdf-rounded-t-sm {
+  border-top-left-radius: 0.125rem !important;
+  border-top-right-radius: 0.125rem !important;
+}
+
+.pdf-rounded-t {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.pdf-rounded-t-md {
+  border-top-left-radius: 0.375rem !important;
+  border-top-right-radius: 0.375rem !important;
+}
+
+.pdf-rounded-t-lg {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.pdf-rounded-t-xl {
+  border-top-left-radius: 0.75rem !important;
+  border-top-right-radius: 0.75rem !important;
+}
+
+.pdf-rounded-t-2xl {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+.pdf-rounded-t-3xl {
+  border-top-left-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem !important;
+}
+
+.pdf-rounded-t-full {
+  border-top-left-radius: 9999px !important;
+  border-top-right-radius: 9999px !important;
+}
+
+.pdf-rounded-r-none {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.pdf-rounded-r-sm {
+  border-top-right-radius: 0.125rem !important;
+  border-bottom-right-radius: 0.125rem !important;
+}
+
+.pdf-rounded-r {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.pdf-rounded-r-md {
+  border-top-right-radius: 0.375rem !important;
+  border-bottom-right-radius: 0.375rem !important;
+}
+
+.pdf-rounded-r-lg {
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+}
+
+.pdf-rounded-r-xl {
+  border-top-right-radius: 0.75rem !important;
+  border-bottom-right-radius: 0.75rem !important;
+}
+
+.pdf-rounded-r-2xl {
+  border-top-right-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+.pdf-rounded-r-3xl {
+  border-top-right-radius: 1.5rem !important;
+  border-bottom-right-radius: 1.5rem !important;
+}
+
+.pdf-rounded-r-full {
+  border-top-right-radius: 9999px !important;
+  border-bottom-right-radius: 9999px !important;
+}
+
+.pdf-rounded-b-none {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.pdf-rounded-b-sm {
+  border-bottom-right-radius: 0.125rem !important;
+  border-bottom-left-radius: 0.125rem !important;
+}
+
+.pdf-rounded-b {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.pdf-rounded-b-md {
+  border-bottom-right-radius: 0.375rem !important;
+  border-bottom-left-radius: 0.375rem !important;
+}
+
+.pdf-rounded-b-lg {
+  border-bottom-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0.5rem !important;
+}
+
+.pdf-rounded-b-xl {
+  border-bottom-right-radius: 0.75rem !important;
+  border-bottom-left-radius: 0.75rem !important;
+}
+
+.pdf-rounded-b-2xl {
+  border-bottom-right-radius: 1rem !important;
+  border-bottom-left-radius: 1rem !important;
+}
+
+.pdf-rounded-b-3xl {
+  border-bottom-right-radius: 1.5rem !important;
+  border-bottom-left-radius: 1.5rem !important;
+}
+
+.pdf-rounded-b-full {
+  border-bottom-right-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+}
+
+.pdf-rounded-l-none {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.pdf-rounded-l-sm {
+  border-top-left-radius: 0.125rem !important;
+  border-bottom-left-radius: 0.125rem !important;
+}
+
+.pdf-rounded-l {
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.pdf-rounded-l-md {
+  border-top-left-radius: 0.375rem !important;
+  border-bottom-left-radius: 0.375rem !important;
+}
+
+.pdf-rounded-l-lg {
+  border-top-left-radius: 0.5rem !important;
+  border-bottom-left-radius: 0.5rem !important;
+}
+
+.pdf-rounded-l-xl {
+  border-top-left-radius: 0.75rem !important;
+  border-bottom-left-radius: 0.75rem !important;
+}
+
+.pdf-rounded-l-2xl {
+  border-top-left-radius: 1rem !important;
+  border-bottom-left-radius: 1rem !important;
+}
+
+.pdf-rounded-l-3xl {
+  border-top-left-radius: 1.5rem !important;
+  border-bottom-left-radius: 1.5rem !important;
+}
+
+.pdf-rounded-l-full {
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+}
+
+.pdf-rounded-tl-none {
+  border-top-left-radius: 0 !important;
+}
+
+.pdf-rounded-tl-sm {
+  border-top-left-radius: 0.125rem !important;
+}
+
+.pdf-rounded-tl {
+  border-top-left-radius: 0.25rem !important;
+}
+
+.pdf-rounded-tl-md {
+  border-top-left-radius: 0.375rem !important;
+}
+
+.pdf-rounded-tl-lg {
+  border-top-left-radius: 0.5rem !important;
+}
+
+.pdf-rounded-tl-xl {
+  border-top-left-radius: 0.75rem !important;
+}
+
+.pdf-rounded-tl-2xl {
+  border-top-left-radius: 1rem !important;
+}
+
+.pdf-rounded-tl-3xl {
+  border-top-left-radius: 1.5rem !important;
+}
+
+.pdf-rounded-tl-full {
+  border-top-left-radius: 9999px !important;
+}
+
+.pdf-rounded-tr-none {
+  border-top-right-radius: 0 !important;
+}
+
+.pdf-rounded-tr-sm {
+  border-top-right-radius: 0.125rem !important;
+}
+
+.pdf-rounded-tr {
+  border-top-right-radius: 0.25rem !important;
+}
+
+.pdf-rounded-tr-md {
+  border-top-right-radius: 0.375rem !important;
+}
+
+.pdf-rounded-tr-lg {
+  border-top-right-radius: 0.5rem !important;
+}
+
+.pdf-rounded-tr-xl {
+  border-top-right-radius: 0.75rem !important;
+}
+
+.pdf-rounded-tr-2xl {
+  border-top-right-radius: 1rem !important;
+}
+
+.pdf-rounded-tr-3xl {
+  border-top-right-radius: 1.5rem !important;
+}
+
+.pdf-rounded-tr-full {
+  border-top-right-radius: 9999px !important;
+}
+
+.pdf-rounded-br-none {
+  border-bottom-right-radius: 0 !important;
+}
+
+.pdf-rounded-br-sm {
+  border-bottom-right-radius: 0.125rem !important;
+}
+
+.pdf-rounded-br {
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.pdf-rounded-br-md {
+  border-bottom-right-radius: 0.375rem !important;
+}
+
+.pdf-rounded-br-lg {
+  border-bottom-right-radius: 0.5rem !important;
+}
+
+.pdf-rounded-br-xl {
+  border-bottom-right-radius: 0.75rem !important;
+}
+
+.pdf-rounded-br-2xl {
+  border-bottom-right-radius: 1rem !important;
+}
+
+.pdf-rounded-br-3xl {
+  border-bottom-right-radius: 1.5rem !important;
+}
+
+.pdf-rounded-br-full {
+  border-bottom-right-radius: 9999px !important;
+}
+
+.pdf-rounded-bl-none {
+  border-bottom-left-radius: 0 !important;
+}
+
+.pdf-rounded-bl-sm {
+  border-bottom-left-radius: 0.125rem !important;
+}
+
+.pdf-rounded-bl {
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.pdf-rounded-bl-md {
+  border-bottom-left-radius: 0.375rem !important;
+}
+
+.pdf-rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem !important;
+}
+
+.pdf-rounded-bl-xl {
+  border-bottom-left-radius: 0.75rem !important;
+}
+
+.pdf-rounded-bl-2xl {
+  border-bottom-left-radius: 1rem !important;
+}
+
+.pdf-rounded-bl-3xl {
+  border-bottom-left-radius: 1.5rem !important;
+}
+
+.pdf-rounded-bl-full {
+  border-bottom-left-radius: 9999px !important;
+}
+
+.border-solid {
+  border-style: solid !important;
+}
+.border-solid:hover {
+  border-style: solid !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+.border-dashed:hover {
+  border-style: dashed !important;
+}
+
+.border-dotted {
+  border-style: dotted !important;
+}
+.border-dotted:hover {
+  border-style: dotted !important;
+}
+
+.border-double {
+  border-style: double !important;
+}
+.border-double:hover {
+  border-style: double !important;
+}
+
+.border-hidden {
+  border-style: hidden !important;
+}
+.border-hidden:hover {
+  border-style: hidden !important;
+}
+
+.border-none {
+  border-style: none !important;
+}
+.border-none:hover {
+  border-style: none !important;
+}
+
+.outline-0 {
+  outline-width: 0px !important;
+}
+
+.outline-1 {
+  outline-width: 1px !important;
+}
+
+.outline-2 {
+  outline-width: 2px !important;
+}
+
+.outline-4 {
+  outline-width: 4px !important;
+}
+
+.outline-8 {
+  outline-width: 8px !important;
+}
+
+.outline-inherit {
+  outline-color: inherit !important;
+}
+
+.outline-current {
+  outline-color: currentColor !important;
+}
+
+.outline-transparent {
+  outline-color: transparent !important;
+}
+
+.outline-black {
+  outline-color: #000 !important;
+}
+
+.outline-white {
+  outline-color: #fff !important;
+}
+
+.outline-none {
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+.outline-solid {
+  outline-style: solid !important;
+}
+
+.outline-dashed {
+  outline-style: dashed !important;
+}
+
+.outline-dotted {
+  outline-style: dotted !important;
+}
+
+.outline-double {
+  outline-style: double !important;
+}
+
+.outline-hidden {
+  outline-style: hidden !important;
+}
+
+.outline-offest-0 {
+  outline-offset: 0px !important;
+}
+
+.outline-offest-1 {
+  outline-offset: 1px !important;
+}
+
+.outline-offest-2 {
+  outline-offset: 2px !important;
+}
+
+.outline-offest-4 {
+  outline-offset: 4px !important;
+}
+
+.outline-offest-8 {
+  outline-offset: 8px !important;
+}
+
+/*# sourceMappingURL=pdf.css.map */

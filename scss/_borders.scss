@@ -1,0 +1,151 @@
+
+//Border Rounded
+$none:    0 !default;
+$sm:      0.125rem !default;
+$one:     0.25rem !default;
+$md:      0.375rem !default;
+$lg:      0.5rem !default;
+$xl:      0.75rem !default;
+$twoxl:   1rem !default;
+$threexl: 1.5rem !default;
+$full:    9999px !default;
+
+$roundeds: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-t: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-r: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-b: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-l: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-tl: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-tr: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-br: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+$roundeds-bl: (
+  "none": $none,
+  "sm":   $sm,
+  "":     $one,
+  "md":   $md,
+  "lg":   $lg,
+  "xl":   $xl,
+  "2xl":  $twoxl,
+  "3xl":  $threexl,
+  "full": $full,
+) !default;
+
+// Border Color
+// Utilities for controlling the style of an element's borders.
+$border-styles: (
+  "solid":  solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "double": double,
+  "hidden": hidden,
+  "none":   none,
+) !default;
+
+
+//Outline Width
+//Utilities for controlling the width of an element's outline.
+$outlines: (
+  "0": 0px,
+  "1": 1px,
+  "2": 2px,
+  "4": 4px,
+  "8": 8px,
+) !default;
+
+//Outline Style
+//Utilities for controlling the style of an element's outline.
+$col-vals: (
+  "inherit":     inherit,
+  "current":     currentColor,
+  "transparent": transparent,
+  "black":       #000,
+  "white":       #fff,
+) !default;
