@@ -12,6 +12,23 @@ npm i colormyar
 ### Download package:
 [Download](https://github.com/sanlinhtik3/pdf-color.zip)
 
+### What's new:
+```html
+Border
+- border-width
+- border-color-100 to 900
+- border-hover
+
+Rounded
+- rounded
+
+Shadow
+- shadow-color-100 to 900
+
+Text
+- text-color-100 to 900
+```
+
 ### Including files:
 ```html
 <link rel="stylesheet" href="pdf-color/css/pdf.css">
